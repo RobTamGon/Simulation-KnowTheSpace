@@ -1,0 +1,36 @@
+{
+	"Tiles":
+	[
+		[true, true],
+		[true, true]
+	],
+	
+	
+	"Walls":
+	{
+		"Horizontal":
+		[
+			[false, false]
+		],
+		"Vertical":
+		[
+			[false],
+			[false]
+		]
+	},
+	
+	
+	"Rooms":
+	[
+		{ "Has": "Key", "Connections": { "Left": { "Exists": false }, "Right": { "Exists": false }, "Up": { "Exists": false }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": "Goal", "Connections": { "Left": { "Exists": false }, "Right": { "Exists": false }, "Up": { "Exists": false }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": false }, "Right": { "Exists": true, "Locked_By": null }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": false } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": true, "Locked_By": "Key" }, "Right": { "Exists": false }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": false } } }
+	],
+	
+	
+	"Explorers":
+	[
+		{ "Position": [0, 1] }
+	]
+}

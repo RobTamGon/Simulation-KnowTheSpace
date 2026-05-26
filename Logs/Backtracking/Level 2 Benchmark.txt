@@ -1,0 +1,58 @@
+Solution not found to Level 2 with Max Depth 1, final iteration count: 2. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 2 with Max Depth 2, final iteration count: 3. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 2 with Max Depth 3, final iteration count: 5. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Solution found to Level 2 with Max Depth 4, final iteration count: 6. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 5, final iteration count: 8. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 6, final iteration count: 9. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 7, final iteration count: 9. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 8, final iteration count: 9. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 9, final iteration count: 9. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.
+
+Solution found to Level 2 with Max Depth 10, final iteration count: 9. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Action history verified.

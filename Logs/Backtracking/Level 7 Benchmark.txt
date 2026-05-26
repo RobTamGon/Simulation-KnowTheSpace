@@ -1,0 +1,12 @@
+Solution not found to Level 7 with Max Depth 1, final iteration count: 9. Final time: 0.001313 seconds, or 0.000022 minutes, or 0.000000 hours.
+Solution not found to Level 7 with Max Depth 2, final iteration count: 61. Final time: 0.005038 seconds, or 0.000084 minutes, or 0.000001 hours.
+Solution not found to Level 7 with Max Depth 3, final iteration count: 325. Final time: 0.025814 seconds, or 0.000430 minutes, or 0.000007 hours.
+Solution not found to Level 7 with Max Depth 4, final iteration count: 1,545. Final time: 0.124968 seconds, or 0.002083 minutes, or 0.000035 hours.
+Solution not found to Level 7 with Max Depth 5, final iteration count: 7,004. Final time: 0.541291 seconds, or 0.009022 minutes, or 0.000150 hours.
+Solution not found to Level 7 with Max Depth 6, final iteration count: 31,143. Final time: 2.410034 seconds, or 0.040167 minutes, or 0.000669 hours.
+Solution not found to Level 7 with Max Depth 7, final iteration count: 137,824. Final time: 11.396369 seconds, or 0.189939 minutes, or 0.003166 hours.
+Solution not found to Level 7 with Max Depth 8, final iteration count: 602,854. Final time: 50.388937 seconds, or 0.839816 minutes, or 0.013997 hours.
+Solution not found to Level 7 with Max Depth 9, final iteration count: 2,642,136. Final time: 273.810960 seconds, or 4.563516 minutes, or 0.076059 hours.
+Solution not found to Level 7 with Max Depth 10, final iteration count: 11,426,175. Final time: 2177.717746 seconds, or 36.295296 minutes, or 0.604922 hours.
+Solution not found to Level 7 with Max Depth 11, final iteration count: 49,652,731. Final time: 9445.701480 seconds, or 157.428358 minutes, or 2.623806 hours.
+Solution not found to Level 7 with Max Depth 12, final iteration count: 212,775,384. Final time: 37618.935474 seconds, or 626.982258 minutes, or 10.449704 hours.

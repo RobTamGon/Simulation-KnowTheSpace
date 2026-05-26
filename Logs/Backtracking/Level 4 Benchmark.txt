@@ -1,0 +1,80 @@
+Solution not found to Level 4 with Max Depth 1, final iteration count: 5. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 2, final iteration count: 22. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 3, final iteration count: 61. Final time: 0.007 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 4, final iteration count: 152. Final time: 0.008 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 5, final iteration count: 340. Final time: 0.018 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 6, final iteration count: 802. Final time: 0.040 seconds, or 0.001 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 7, final iteration count: 1,773. Final time: 0.090 seconds, or 0.002 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 8, final iteration count: 4,098. Final time: 0.213 seconds, or 0.004 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 9, final iteration count: 8,942. Final time: 0.461 seconds, or 0.008 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 10, final iteration count: 20,352. Final time: 1.022 seconds, or 0.017 minutes, or 0.000 hours.
+Solution not found to Level 4 with Max Depth 11, final iteration count: 44,685. Final time: 2.270 seconds, or 0.038 minutes, or 0.001 hours.
+Solution not found to Level 4 with Max Depth 12, final iteration count: 102,257. Final time: 5.212 seconds, or 0.087 minutes, or 0.001 hours.
+Solution not found to Level 4 with Max Depth 13, final iteration count: 225,777. Final time: 11.923 seconds, or 0.199 minutes, or 0.003 hours.
+Solution not found to Level 4 with Max Depth 14, final iteration count: 517,425. Final time: 26.361 seconds, or 0.439 minutes, or 0.007 hours.
+Solution not found to Level 4 with Max Depth 15, final iteration count: 1,143,356. Final time: 57.585 seconds, or 0.960 minutes, or 0.016 hours.
+Solution not found to Level 4 with Max Depth 16, final iteration count: 2,620,450. Final time: 131.359 seconds, or 2.189 minutes, or 0.036 hours.
+Solution not found to Level 4 with Max Depth 17, final iteration count: 5,803,645. Final time: 294.270 seconds, or 4.904 minutes, or 0.082 hours.
+Solution not found to Level 4 with Max Depth 18, final iteration count: 13,345,178. Final time: 675.101 seconds, or 11.252 minutes, or 0.188 hours.
+Solution not found to Level 4 with Max Depth 19, final iteration count: 29,709,001. Final time: 1509.739 seconds, or 25.162 minutes, or 0.419 hours.
+Solution not found to Level 4 with Max Depth 20, final iteration count: 68,761,633. Final time: 3694.758 seconds, or 61.579 minutes, or 1.026 hours.
+Solution not found to Level 4 with Max Depth 21, final iteration count: 154,233,812. Final time: 7585.524 seconds, or 126.425 minutes, or 2.107 hours.
+Solution not found to Level 4 with Max Depth 22, final iteration count: 360,037,147. Final time: 17669.931 seconds, or 294.499 minutes, or 4.908 hours.
+Solution not found to Level 4 with Max Depth 23, final iteration count: 814,923,488. Final time: 51961.743 seconds, or 866.029 minutes, or 14.434 hours.
+Solution found to Level 4 with Max Depth 24, final iteration count: 300,524,560. Final time: 14513.806 seconds, or 241.897 minutes, or 4.032 hours.
+Actions:
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=2) Up
+Move Explorer in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=2) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=0, y=2) Up
+Slide Room in Vector2(x=1, y=2) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=2, y=2) Left
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=2, y=1) Left
+Move Explorer in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Move Explorer in Vector2(x=0, y=1) Down
+Move Explorer in Vector2(x=0, y=2) Up
+Move Explorer in Vector2(x=0, y=1) Right
+Action history verified.
+
+Solution found to Level 4 with Max Depth 25, final iteration count: 673,773,707. Final time: 33870.619 seconds, or 564.510 minutes, or 9.408 hours.
+Actions:
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=2) Up
+Move Explorer in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=2) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=0, y=2) Up
+Slide Room in Vector2(x=1, y=2) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=2, y=2) Left
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=2, y=1) Left
+Move Explorer in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Slide Room in Vector2(x=2, y=0) Left
+Move Explorer in Vector2(x=0, y=1) Down
+Move Explorer in Vector2(x=0, y=2) Up
+Move Explorer in Vector2(x=0, y=1) Right
+Action history verified.
+

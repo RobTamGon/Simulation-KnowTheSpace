@@ -1,0 +1,240 @@
+Solution not found to Level 3 with Max Depth 1, final iteration count: 6. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 2, final iteration count: 23. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 3, final iteration count: 70. Final time: 0.003 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 4, final iteration count: 196. Final time: 0.008 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 5, final iteration count: 561. Final time: 0.024 seconds, or 0.000 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 6, final iteration count: 1,475. Final time: 0.064 seconds, or 0.001 minutes, or 0.000 hours.
+Solution not found to Level 3 with Max Depth 7, final iteration count: 4,024. Final time: 0.170 seconds, or 0.003 minutes, or 0.000 hours.
+Solution found to Level 3 with Max Depth 8, final iteration count: 3,172. Final time: 0.129 seconds, or 0.002 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Left
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 9, final iteration count: 6,404. Final time: 0.261 seconds, or 0.004 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=0) Down
+Slide Room in Vector2(x=1, y=0) Left
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 10, final iteration count: 2,492. Final time: 0.103 seconds, or 0.002 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=0, y=0) Right
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Down
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 11, final iteration count: 4,290. Final time: 0.183 seconds, or 0.003 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=0) Down
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 12, final iteration count: 808. Final time: 0.033 seconds, or 0.001 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Move Explorer in Vector2(x=0, y=2) Right
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Left
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 13, final iteration count: 1,096. Final time: 0.043 seconds, or 0.001 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Move Explorer in Vector2(x=0, y=2) Right
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=0) Down
+Slide Room in Vector2(x=1, y=0) Left
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 14, final iteration count: 1,298. Final time: 0.052 seconds, or 0.001 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Move Explorer in Vector2(x=0, y=2) Right
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=2) Up
+Move Explorer in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=0, y=1) Down
+Slide Room in Vector2(x=0, y=0) Down
+Move Explorer in Vector2(x=1, y=1) Left
+Move Explorer in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 15, final iteration count: 2,085. Final time: 0.085 seconds, or 0.001 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Down
+Move Explorer in Vector2(x=1, y=1) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 16, final iteration count: 4,811. Final time: 0.203 seconds, or 0.003 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=1, y=0) Down
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Down
+Move Explorer in Vector2(x=1, y=1) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 17, final iteration count: 5,365. Final time: 0.218 seconds, or 0.004 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=0, y=1) Right
+Slide Room in Vector2(x=0, y=0) Down
+Slide Room in Vector2(x=1, y=0) Left
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=1, y=1) Right
+Slide Room in Vector2(x=0, y=1) Right
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Down
+Move Explorer in Vector2(x=1, y=2) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 18, final iteration count: 4,782. Final time: 0.194 seconds, or 0.003 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=0, y=0) Right
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 19, final iteration count: 11,823. Final time: 0.541 seconds, or 0.009 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Slide Room in Vector2(x=2, y=1) Down
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Right
+Action history verified.
+
+Solution found to Level 3 with Max Depth 20, final iteration count: 15,903. Final time: 0.703 seconds, or 0.012 minutes, or 0.000 hours.
+Actions:
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=2) Up
+Slide Room in Vector2(x=1, y=2) Right
+Slide Room in Vector2(x=1, y=1) Down
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=1, y=1) Up
+Slide Room in Vector2(x=2, y=1) Left
+Slide Room in Vector2(x=2, y=0) Down
+Slide Room in Vector2(x=1, y=0) Right
+Slide Room in Vector2(x=0, y=0) Right
+Slide Room in Vector2(x=0, y=1) Up
+Slide Room in Vector2(x=1, y=1) Left
+Slide Room in Vector2(x=1, y=2) Up
+Slide Room in Vector2(x=2, y=2) Left
+Move Explorer in Vector2(x=0, y=2) Right
+Move Explorer in Vector2(x=1, y=2) Up
+Move Explorer in Vector2(x=1, y=1) Up
+Move Explorer in Vector2(x=1, y=0) Right
+Action history verified.

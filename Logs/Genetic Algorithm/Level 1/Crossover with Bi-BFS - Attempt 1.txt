@@ -1,0 +1,23 @@
+Created first generation. Total time: 0.053 seconds, or 0.001 minutes, or 0.000 hours.
+
+Generation 1
+
+Evaluated Fitness of Generation 1. Total time: 0.097 seconds, or 0.002 minutes, or 0.000 hours.
+Description of fittest Individual:
+- Fitness: 1000020.0
+- Did it beat the Level: Yes
+- Did it loop: No
+- Keys obtained: 0
+- Keys used: 0
+
+Actions:
+1: Move Explorer in (0, 0) Right
+2: Move Explorer in (1, 0) Right (Winning Action)
+3: Move Explorer in (2, 0) Left
+4: Move Explorer in (1, 0) Left
+5: Move Explorer in (0, 0) Right
+6: Move Explorer in (1, 0) Right (Winning Action)
+7: Move Explorer in (2, 0) Left
+8: Move Explorer in (1, 0) Right (Winning Action)
+9: Move Explorer in (2, 0) Left
+10: Move Explorer in (1, 0) Right (Winning Action)

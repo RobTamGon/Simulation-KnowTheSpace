@@ -1,0 +1,1043 @@
+Created first generation. Total time: 0.133 seconds, or 0.002 minutes, or 0.000 hours.
+
+Generation 1
+
+Evaluated Fitness of Generation 1. Total time: 0.261 seconds, or 0.004 minutes, or 0.000 hours.
+Description of fittest Individual:
+- Fitness: 100.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 0
+- Keys used: 0
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Slide Room in (0, 0) Down
+3: Slide Room in (1, 0) Left
+4: Move Explorer in (1, 2) Right
+5: Slide Room in (1, 1) Up
+6: Slide Room in (1, 2) Up
+7: Slide Room in (0, 2) Right
+8: Move Explorer in (2, 2) Left
+9: Move Explorer in (1, 2) Up
+10: Move Explorer in (1, 1) Right
+
+Selected parents of the next Generation. Total time: 0.262 seconds, or 0.004 minutes, or 0.000 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 8.180 seconds, or 0.136 minutes, or 0.002 hours.
+
+Applied Mutations to the next Generation. Total time: 8.312 seconds, or 0.139 minutes, or 0.002 hours.
+
+Generation 2
+
+Evaluated Fitness of Generation 2. Total time: 8.481 seconds, or 0.141 minutes, or 0.002 hours.
+Description of fittest Individual:
+- Fitness: 650.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 0
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+
+Selected parents of the next Generation. Total time: 8.482 seconds, or 0.141 minutes, or 0.002 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 10.409 seconds, or 0.173 minutes, or 0.003 hours.
+
+Applied Mutations to the next Generation. Total time: 10.542 seconds, or 0.176 minutes, or 0.003 hours.
+
+Generation 3
+
+Evaluated Fitness of Generation 3. Total time: 10.855 seconds, or 0.181 minutes, or 0.003 hours.
+Description of fittest Individual:
+- Fitness: 1700.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+
+Selected parents of the next Generation. Total time: 10.856 seconds, or 0.181 minutes, or 0.003 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 11.083 seconds, or 0.185 minutes, or 0.003 hours.
+
+Applied Mutations to the next Generation. Total time: 11.215 seconds, or 0.187 minutes, or 0.003 hours.
+
+Generation 4
+
+Evaluated Fitness of Generation 4. Total time: 11.534 seconds, or 0.192 minutes, or 0.003 hours.
+Description of fittest Individual:
+- Fitness: 1750.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Slide Room in (1, 2) Left
+23: Move Explorer in (2, 2) Up
+24: Slide Room in (2, 2) Left
+25: Move Explorer in (2, 1) Left
+
+Selected parents of the next Generation. Total time: 11.535 seconds, or 0.192 minutes, or 0.003 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 11.789 seconds, or 0.196 minutes, or 0.003 hours.
+
+Applied Mutations to the next Generation. Total time: 11.943 seconds, or 0.199 minutes, or 0.003 hours.
+
+Generation 5
+
+Evaluated Fitness of Generation 5. Total time: 12.251 seconds, or 0.204 minutes, or 0.003 hours.
+Description of fittest Individual:
+- Fitness: 1800.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Move Explorer in (2, 1) Down
+27: Slide Room in (1, 1) Down
+28: Slide Room in (2, 1) Left
+29: Slide Room in (2, 0) Down
+30: Slide Room in (1, 0) Right
+
+Selected parents of the next Generation. Total time: 12.252 seconds, or 0.204 minutes, or 0.003 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 12.623 seconds, or 0.210 minutes, or 0.004 hours.
+
+Applied Mutations to the next Generation. Total time: 12.808 seconds, or 0.213 minutes, or 0.004 hours.
+
+Generation 6
+
+Evaluated Fitness of Generation 6. Total time: 13.208 seconds, or 0.220 minutes, or 0.004 hours.
+Description of fittest Individual:
+- Fitness: 1850.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Move Explorer in (2, 2) Left
+22: Slide Room in (1, 1) Left
+23: Slide Room in (1, 0) Down
+24: Move Explorer in (1, 2) Right
+25: Slide Room in (1, 1) Up
+26: Slide Room in (2, 1) Left
+27: Slide Room in (2, 0) Down
+28: Slide Room in (1, 0) Right
+29: Slide Room in (0, 0) Right
+30: Slide Room in (0, 1) Up
+31: Slide Room in (1, 1) Left
+32: Move Explorer in (2, 2) Left
+33: Slide Room in (1, 0) Down
+34: Slide Room in (2, 0) Left
+35: Move Explorer in (1, 2) Right
+
+Selected parents of the next Generation. Total time: 13.209 seconds, or 0.220 minutes, or 0.004 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 13.548 seconds, or 0.226 minutes, or 0.004 hours.
+
+Applied Mutations to the next Generation. Total time: 13.731 seconds, or 0.229 minutes, or 0.004 hours.
+
+Generation 7
+
+Evaluated Fitness of Generation 7. Total time: 14.173 seconds, or 0.236 minutes, or 0.004 hours.
+Description of fittest Individual:
+- Fitness: 1900.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Move Explorer in (2, 2) Left
+22: Slide Room in (1, 1) Left
+23: Slide Room in (1, 0) Down
+24: Move Explorer in (1, 2) Right
+25: Slide Room in (1, 1) Up
+26: Slide Room in (2, 1) Left
+27: Slide Room in (2, 0) Down
+28: Slide Room in (1, 0) Right
+29: Slide Room in (0, 0) Right
+30: Slide Room in (0, 1) Up
+31: Slide Room in (0, 2) Up
+32: Slide Room in (1, 2) Left
+33: Slide Room in (1, 1) Down
+34: Slide Room in (0, 1) Right
+35: Slide Room in (0, 0) Down
+36: Slide Room in (1, 0) Left
+37: Slide Room in (2, 0) Left
+38: Slide Room in (2, 1) Up
+39: Slide Room in (1, 1) Right
+40: Slide Room in (1, 0) Down
+
+Selected parents of the next Generation. Total time: 14.174 seconds, or 0.236 minutes, or 0.004 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 14.571 seconds, or 0.243 minutes, or 0.004 hours.
+
+Applied Mutations to the next Generation. Total time: 14.759 seconds, or 0.246 minutes, or 0.004 hours.
+
+Generation 8
+
+Evaluated Fitness of Generation 8. Total time: 15.239 seconds, or 0.254 minutes, or 0.004 hours.
+Description of fittest Individual:
+- Fitness: 1950.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Slide Room in (1, 0) Left
+17: Slide Room in (1, 1) Up
+18: Slide Room in (2, 1) Left
+19: Slide Room in (2, 0) Down
+20: Move Explorer in (0, 2) Up
+21: Move Explorer in (0, 1) Right
+22: Move Explorer in (1, 1) Down
+23: Slide Room in (2, 1) Up
+24: Slide Room in (1, 1) Right
+25: Slide Room in (0, 1) Right
+26: Slide Room in (0, 2) Up
+27: Move Explorer in (1, 2) Up
+28: Slide Room in (1, 2) Left
+29: Slide Room in (2, 2) Left
+30: Slide Room in (2, 1) Down
+31: Move Explorer in (1, 1) Down
+32: Slide Room in (2, 0) Down
+33: Move Explorer in (1, 2) Up
+34: Slide Room in (1, 0) Right
+35: Slide Room in (0, 0) Right
+36: Slide Room in (0, 1) Up
+37: Move Explorer in (1, 1) Down
+38: Slide Room in (0, 0) Down
+39: Move Explorer in (1, 2) Left
+40: Slide Room in (0, 1) Up
+41: Slide Room in (1, 1) Left
+42: Slide Room in (1, 0) Down
+43: Move Explorer in (0, 2) Right
+44: Slide Room in (2, 0) Left
+45: Move Explorer in (1, 2) Left
+
+Selected parents of the next Generation. Total time: 15.240 seconds, or 0.254 minutes, or 0.004 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 15.685 seconds, or 0.261 minutes, or 0.004 hours.
+
+Applied Mutations to the next Generation. Total time: 15.849 seconds, or 0.264 minutes, or 0.004 hours.
+
+Generation 9
+
+Evaluated Fitness of Generation 9. Total time: 16.362 seconds, or 0.273 minutes, or 0.005 hours.
+Description of fittest Individual:
+- Fitness: 2000.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Move Explorer in (2, 2) Left
+47: Move Explorer in (1, 2) Left
+48: Slide Room in (0, 1) Up
+49: Slide Room in (1, 1) Left
+50: Slide Room in (2, 1) Left
+
+Selected parents of the next Generation. Total time: 16.363 seconds, or 0.273 minutes, or 0.005 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 16.785 seconds, or 0.280 minutes, or 0.005 hours.
+
+Applied Mutations to the next Generation. Total time: 16.956 seconds, or 0.283 minutes, or 0.005 hours.
+
+Generation 10
+
+Evaluated Fitness of Generation 10. Total time: 17.563 seconds, or 0.293 minutes, or 0.005 hours.
+Description of fittest Individual:
+- Fitness: 2550.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Slide Room in (1, 0) Left
+18: Move Explorer in (0, 1) Right
+19: Slide Room in (0, 0) Right
+20: Slide Room in (0, 1) Up
+21: Move Explorer in (1, 1) Right
+22: Slide Room in (1, 1) Left
+23: Slide Room in (1, 0) Down
+24: Slide Room in (2, 0) Left
+25: Move Explorer in (2, 1) Down
+26: Move Explorer in (2, 2) Left
+27: Slide Room in (1, 0) Right
+28: Move Explorer in (1, 2) Right
+29: Slide Room in (0, 0) Right
+30: Move Explorer in (2, 2) Up
+31: Slide Room in (0, 1) Up
+32: Slide Room in (0, 2) Up
+33: Slide Room in (1, 2) Left
+34: Slide Room in (1, 1) Down
+35: Slide Room in (0, 1) Right
+36: Move Explorer in (2, 1) Down
+37: Slide Room in (1, 1) Left
+38: Slide Room in (1, 0) Down
+39: Move Explorer in (2, 2) Up
+40: Slide Room in (2, 0) Left
+41: Move Explorer in (2, 1) Down
+42: Slide Room in (2, 1) Up
+43: Slide Room in (1, 1) Right
+44: Move Explorer in (2, 2) Up
+45: Slide Room in (1, 0) Down
+46: Move Explorer in (2, 1) Down
+47: Slide Room in (0, 0) Right
+48: Slide Room in (0, 1) Up
+49: Slide Room in (0, 2) Up
+50: Slide Room in (1, 2) Left
+51: Slide Room in (1, 1) Down
+52: Move Explorer in (2, 2) Left
+53: Slide Room in (0, 1) Right
+54: Slide Room in (0, 2) Up
+55: Move Explorer in (1, 2) Right
+
+Selected parents of the next Generation. Total time: 17.564 seconds, or 0.293 minutes, or 0.005 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 18.061 seconds, or 0.301 minutes, or 0.005 hours.
+
+Applied Mutations to the next Generation. Total time: 18.252 seconds, or 0.304 minutes, or 0.005 hours.
+
+Generation 11
+
+Evaluated Fitness of Generation 11. Total time: 18.825 seconds, or 0.314 minutes, or 0.005 hours.
+Description of fittest Individual:
+- Fitness: 2600.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Slide Room in (0, 1) Up
+47: Slide Room in (1, 1) Left
+48: Move Explorer in (2, 2) Left
+49: Move Explorer in (1, 2) Left
+50: Slide Room in (1, 0) Down
+51: Move Explorer in (0, 2) Right
+52: Slide Room in (0, 0) Right
+53: Move Explorer in (1, 2) Left
+54: Slide Room in (0, 1) Up
+55: Move Explorer in (0, 2) Right
+56: Slide Room in (0, 2) Up
+57: Move Explorer in (1, 2) Right
+58: Move Explorer in (2, 2) Up
+59: Move Explorer in (2, 1) Left
+60: Slide Room in (0, 1) Down
+
+Selected parents of the next Generation. Total time: 18.827 seconds, or 0.314 minutes, or 0.005 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 19.350 seconds, or 0.322 minutes, or 0.005 hours.
+
+Applied Mutations to the next Generation. Total time: 19.566 seconds, or 0.326 minutes, or 0.005 hours.
+
+Generation 12
+
+Evaluated Fitness of Generation 12. Total time: 20.279 seconds, or 0.338 minutes, or 0.006 hours.
+Description of fittest Individual:
+- Fitness: 2650.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Slide Room in (0, 1) Up
+47: Slide Room in (1, 1) Left
+48: Move Explorer in (2, 2) Left
+49: Move Explorer in (1, 2) Left
+50: Slide Room in (1, 0) Down
+51: Move Explorer in (0, 2) Right
+52: Slide Room in (0, 0) Right
+53: Move Explorer in (1, 2) Left
+54: Slide Room in (0, 1) Up
+55: Move Explorer in (0, 2) Right
+56: Slide Room in (1, 1) Left
+57: Slide Room in (2, 1) Left
+58: Move Explorer in (1, 2) Left
+59: Slide Room in (2, 0) Down
+60: Move Explorer in (0, 2) Right
+61: Move Explorer in (1, 2) Up
+62: Move Explorer in (1, 1) Left
+63: Slide Room in (1, 0) Right
+64: Move Explorer in (0, 1) Right
+65: Slide Room in (0, 0) Right
+
+Selected parents of the next Generation. Total time: 20.280 seconds, or 0.338 minutes, or 0.006 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 20.912 seconds, or 0.349 minutes, or 0.006 hours.
+
+Applied Mutations to the next Generation. Total time: 21.123 seconds, or 0.352 minutes, or 0.006 hours.
+
+Generation 13
+
+Evaluated Fitness of Generation 13. Total time: 21.831 seconds, or 0.364 minutes, or 0.006 hours.
+Description of fittest Individual:
+- Fitness: 2700.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Slide Room in (0, 1) Up
+47: Slide Room in (1, 1) Left
+48: Move Explorer in (2, 2) Left
+49: Move Explorer in (1, 2) Left
+50: Slide Room in (1, 0) Down
+51: Move Explorer in (0, 2) Right
+52: Slide Room in (0, 0) Right
+53: Move Explorer in (1, 2) Left
+54: Slide Room in (0, 1) Up
+55: Move Explorer in (0, 2) Right
+56: Slide Room in (1, 1) Left
+57: Slide Room in (2, 1) Left
+58: Move Explorer in (1, 2) Left
+59: Slide Room in (2, 0) Down
+60: Move Explorer in (0, 2) Right
+61: Move Explorer in (1, 2) Up
+62: Move Explorer in (1, 1) Left
+63: Slide Room in (1, 0) Right
+64: Move Explorer in (0, 1) Right
+65: Slide Room in (0, 0) Right
+66: Move Explorer in (1, 1) Down
+67: Move Explorer in (1, 2) Right
+68: Slide Room in (1, 0) Left
+69: Slide Room in (2, 0) Left
+70: Move Explorer in (2, 2) Up
+
+Selected parents of the next Generation. Total time: 21.832 seconds, or 0.364 minutes, or 0.006 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 22.463 seconds, or 0.374 minutes, or 0.006 hours.
+
+Applied Mutations to the next Generation. Total time: 22.678 seconds, or 0.378 minutes, or 0.006 hours.
+
+Generation 14
+
+Evaluated Fitness of Generation 14. Total time: 23.504 seconds, or 0.392 minutes, or 0.007 hours.
+Description of fittest Individual:
+- Fitness: 2750.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Slide Room in (0, 1) Up
+47: Slide Room in (1, 1) Left
+48: Move Explorer in (2, 2) Left
+49: Move Explorer in (1, 2) Left
+50: Slide Room in (1, 0) Down
+51: Move Explorer in (0, 2) Right
+52: Slide Room in (0, 0) Right
+53: Move Explorer in (1, 2) Left
+54: Slide Room in (0, 1) Up
+55: Move Explorer in (0, 2) Right
+56: Slide Room in (1, 1) Left
+57: Slide Room in (2, 1) Left
+58: Move Explorer in (1, 2) Left
+59: Slide Room in (2, 0) Down
+60: Move Explorer in (0, 2) Right
+61: Move Explorer in (1, 2) Up
+62: Move Explorer in (1, 1) Left
+63: Slide Room in (1, 0) Right
+64: Move Explorer in (0, 1) Right
+65: Slide Room in (0, 0) Right
+66: Move Explorer in (1, 1) Down
+67: Move Explorer in (1, 2) Right
+68: Move Explorer in (2, 2) Up
+69: Slide Room in (0, 1) Up
+70: Move Explorer in (2, 1) Down
+71: Slide Room in (1, 1) Left
+72: Move Explorer in (2, 2) Left
+73: Slide Room in (2, 1) Left
+74: Move Explorer in (1, 2) Left
+75: Slide Room in (2, 0) Down
+
+Selected parents of the next Generation. Total time: 23.506 seconds, or 0.392 minutes, or 0.007 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 24.286 seconds, or 0.405 minutes, or 0.007 hours.
+
+Applied Mutations to the next Generation. Total time: 24.523 seconds, or 0.409 minutes, or 0.007 hours.
+
+Generation 15
+
+Evaluated Fitness of Generation 15. Total time: 25.437 seconds, or 0.424 minutes, or 0.007 hours.
+Description of fittest Individual:
+- Fitness: 2800.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 1
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Move Explorer in (2, 2) Left
+22: Slide Room in (1, 1) Left
+23: Slide Room in (1, 0) Down
+24: Move Explorer in (1, 2) Right
+25: Slide Room in (1, 1) Up
+26: Move Explorer in (2, 2) Up
+27: Slide Room in (0, 1) Right
+28: Slide Room in (0, 0) Down
+29: Slide Room in (1, 0) Left
+30: Slide Room in (1, 1) Up
+31: Slide Room in (1, 2) Up
+32: Move Explorer in (2, 1) Down
+33: Slide Room in (1, 1) Down
+34: Slide Room in (0, 1) Right
+35: Move Explorer in (2, 2) Up
+36: Slide Room in (0, 0) Down
+37: Move Explorer in (2, 1) Left
+38: Slide Room in (1, 0) Left
+39: Move Explorer in (1, 1) Down
+40: Slide Room in (2, 0) Left
+41: Move Explorer in (1, 2) Up
+42: Slide Room in (2, 1) Up
+43: Move Explorer in (1, 1) Down
+44: Move Explorer in (1, 2) Right
+45: Slide Room in (1, 1) Right
+46: Slide Room in (0, 1) Right
+47: Slide Room in (0, 2) Up
+48: Slide Room in (1, 2) Left
+49: Slide Room in (1, 1) Down
+50: Slide Room in (1, 0) Down
+51: Slide Room in (2, 0) Left
+52: Slide Room in (2, 1) Up
+53: Slide Room in (1, 1) Right
+54: Slide Room in (1, 2) Up
+55: Slide Room in (0, 2) Right
+56: Move Explorer in (2, 2) Left
+57: Slide Room in (0, 1) Down
+58: Move Explorer in (1, 2) Right
+59: Slide Room in (0, 0) Down
+60: Slide Room in (1, 0) Left
+61: Move Explorer in (2, 2) Left
+62: Slide Room in (1, 1) Up
+63: Slide Room in (2, 1) Left
+64: Slide Room in (2, 0) Down
+65: Slide Room in (1, 0) Right
+66: Slide Room in (0, 0) Right
+67: Slide Room in (0, 1) Up
+68: Slide Room in (0, 2) Up
+69: Move Explorer in (1, 2) Right
+70: Slide Room in (1, 2) Left
+71: Slide Room in (1, 1) Down
+72: Move Explorer in (2, 2) Up
+73: Slide Room in (1, 0) Down
+74: Slide Room in (0, 0) Right
+75: Move Explorer in (2, 1) Down
+76: Slide Room in (0, 1) Up
+77: Move Explorer in (2, 2) Left
+78: Slide Room in (1, 1) Left
+79: Slide Room in (1, 0) Down
+80: Slide Room in (2, 0) Left
+
+Selected parents of the next Generation. Total time: 25.438 seconds, or 0.424 minutes, or 0.007 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 27.205 seconds, or 0.453 minutes, or 0.008 hours.
+
+Applied Mutations to the next Generation. Total time: 27.446 seconds, or 0.457 minutes, or 0.008 hours.
+
+Generation 16
+
+Evaluated Fitness of Generation 16. Total time: 28.307 seconds, or 0.472 minutes, or 0.008 hours.
+Description of fittest Individual:
+- Fitness: 1003850.0
+- Did it beat the Level: Yes
+- Did it loop: No
+- Keys obtained: 2
+- Keys used: 2
+
+Actions:
+1: Slide Room in (0, 1) Right
+2: Move Explorer in (1, 2) Right
+3: Slide Room in (1, 1) Left
+4: Slide Room in (1, 2) Up
+5: Slide Room in (0, 2) Right
+6: Move Explorer in (2, 2) Left
+7: Slide Room in (0, 1) Down
+8: Move Explorer in (1, 2) Up
+9: Move Explorer in (1, 1) Right
+10: Slide Room in (1, 1) Left
+11: Slide Room in (1, 0) Down
+12: Move Explorer in (2, 1) Left
+13: Slide Room in (0, 0) Right
+14: Move Explorer in (1, 1) Left
+15: Move Explorer in (0, 1) Down
+16: Move Explorer in (0, 2) Up
+17: Move Explorer in (0, 1) Right
+18: Move Explorer in (1, 1) Right
+19: Slide Room in (0, 1) Up
+20: Move Explorer in (2, 1) Down
+21: Slide Room in (0, 2) Up
+22: Move Explorer in (2, 2) Up
+23: Move Explorer in (2, 1) Left
+24: Slide Room in (1, 2) Left
+25: Move Explorer in (1, 1) Right
+26: Slide Room in (1, 1) Down
+27: Slide Room in (1, 0) Down
+28: Slide Room in (2, 0) Left
+29: Move Explorer in (2, 1) Down
+30: Slide Room in (2, 1) Up
+31: Slide Room in (1, 1) Right
+32: Slide Room in (1, 0) Down
+33: Move Explorer in (2, 2) Left
+34: Slide Room in (0, 0) Right
+35: Slide Room in (0, 1) Up
+36: Slide Room in (1, 1) Left
+37: Slide Room in (2, 1) Left
+38: Slide Room in (2, 0) Down
+39: Slide Room in (1, 0) Right
+40: Move Explorer in (1, 2) Right
+41: Slide Room in (0, 0) Right
+42: Slide Room in (0, 1) Up
+43: Slide Room in (1, 1) Left
+44: Slide Room in (1, 0) Down
+45: Slide Room in (0, 0) Right
+46: Slide Room in (0, 1) Up
+47: Slide Room in (1, 1) Left
+48: Move Explorer in (2, 2) Left
+49: Move Explorer in (1, 2) Left
+50: Slide Room in (1, 0) Down
+51: Move Explorer in (0, 2) Right
+52: Slide Room in (0, 0) Right
+53: Move Explorer in (1, 2) Left
+54: Slide Room in (0, 1) Up
+55: Move Explorer in (0, 2) Right
+56: Slide Room in (1, 1) Left
+57: Slide Room in (2, 1) Left
+58: Move Explorer in (1, 2) Left
+59: Slide Room in (2, 0) Down
+60: Move Explorer in (0, 2) Right
+61: Move Explorer in (1, 2) Up
+62: Move Explorer in (1, 1) Left
+63: Slide Room in (1, 0) Right
+64: Move Explorer in (0, 1) Right
+65: Slide Room in (0, 0) Right
+66: Move Explorer in (1, 1) Down
+67: Move Explorer in (1, 2) Right
+68: Move Explorer in (2, 2) Up
+69: Slide Room in (0, 1) Up
+70: Move Explorer in (2, 1) Down
+71: Slide Room in (1, 1) Left
+72: Move Explorer in (2, 2) Left
+73: Slide Room in (2, 1) Left
+74: Move Explorer in (1, 2) Left
+75: Slide Room in (2, 0) Down
+76: Move Explorer in (0, 2) Up
+77: Slide Room in (1, 0) Right
+78: Slide Room in (0, 0) Right
+79: Move Explorer in (0, 1) Down
+80: Slide Room in (0, 1) Up
+81: Move Explorer in (0, 2) Right
+82: Slide Room in (0, 2) Up
+83: Move Explorer in (1, 2) Up
+84: Slide Room in (1, 2) Left
+85: Move Explorer in (1, 1) Right (Winning Action)

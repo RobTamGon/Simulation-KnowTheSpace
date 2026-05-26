@@ -1,0 +1,44 @@
+{
+	"Tiles":
+	[
+		[true, true, true],
+		[true, true, true],
+		[true, true, true]
+	],
+	
+	
+	"Walls":
+	{
+		"Horizontal":
+		[
+			[false, false, false],
+			[false, false, false]
+		],
+		"Vertical":
+		[
+			[false, false],
+			[false, false],
+			[false, false]
+		]
+	},
+	
+	
+	"Rooms":
+	[
+		{ "Has": "Key", "Connections": { "Left": { "Exists": false }, "Right": { "Exists": true, "Locked_By": null }, "Up": { "Exists": false }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": false }, "Right": { "Exists": false }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": true, "Locked_By": null }, "Right": { "Exists": false }, "Up": { "Exists": false }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": true, "Locked_By": null }, "Right": { "Exists": false }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": true, "Locked_By": null } } },
+		null,
+		{ "Has": null, "Connections": { "Left": { "Exists": false }, "Right": { "Exists": true, "Locked_By": null }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": true, "Locked_By": null } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": false }, "Right": { "Exists": true, "Locked_By": null }, "Up": { "Exists": false }, "Down": { "Exists": false } } },
+		{ "Has": null, "Connections": { "Left": { "Exists": true, "Locked_By": null }, "Right": { "Exists": true, "Locked_By": null }, "Up": { "Exists": true, "Locked_By": null }, "Down": { "Exists": false } } },
+		{ "Has": "Goal", "Connections": { "Left": { "Exists": true, "Locked_By": "Key" }, "Right": { "Exists": false }, "Up": { "Exists": false }, "Down": { "Exists": false } } }
+	],
+	
+	
+	"Explorers":
+	[
+		{ "Position": [0, 2] }
+	]
+}

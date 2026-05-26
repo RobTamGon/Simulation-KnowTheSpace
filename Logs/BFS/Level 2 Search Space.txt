@@ -1,0 +1,10 @@
+Search space with depth of 1 Actions complete, final iteration count: 1, unique states visited: 2. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 2 Actions complete, final iteration count: 2, unique states visited: 3. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 3 Actions complete, final iteration count: 4, unique states visited: 4. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 4 Actions complete, final iteration count: 7, unique states visited: 6. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 5 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 6 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 7 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 8 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 9 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Search space with depth of 10 Actions complete, final iteration count: 9, unique states visited: 7. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.

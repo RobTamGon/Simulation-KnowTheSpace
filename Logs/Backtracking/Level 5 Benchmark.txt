@@ -1,0 +1,14 @@
+Solution not found to Level 5 with Max Depth 1, final iteration count: 7. Final time: 0.000000 seconds, or 0.000000 minutes, or 0.000000 hours.
+Solution not found to Level 5 with Max Depth 2, final iteration count: 43. Final time: 0.000000 seconds, or 0.000000 minutes, or 0.000000 hours.
+Solution not found to Level 5 with Max Depth 3, final iteration count: 226. Final time: 0.011412 seconds, or 0.000190 minutes, or 0.000003 hours.
+Solution not found to Level 5 with Max Depth 4, final iteration count: 1,143. Final time: 0.061861 seconds, or 0.001031 minutes, or 0.000017 hours.
+Solution not found to Level 5 with Max Depth 5, final iteration count: 5,607. Final time: 0.279763 seconds, or 0.004663 minutes, or 0.000078 hours.
+Solution not found to Level 5 with Max Depth 6, final iteration count: 27,000. Final time: 1.539918 seconds, or 0.025665 minutes, or 0.000428 hours.
+Solution not found to Level 5 with Max Depth 7, final iteration count: 128,975. Final time: 6.651862 seconds, or 0.110864 minutes, or 0.001848 hours.
+Solution not found to Level 5 with Max Depth 8, final iteration count: 608,925. Final time: 30.183460 seconds, or 0.503058 minutes, or 0.008384 hours.
+Solution not found to Level 5 with Max Depth 9, final iteration count: 2,871,574. Final time: 144.479463 seconds, or 2.407991 minutes, or 0.040133 hours.
+Solution not found to Level 5 with Max Depth 10, final iteration count: 13,385,243. Final time: 1000.234575 seconds, or 16.670576 minutes, or 0.277843 hours.
+Solution not found to Level 5 with Max Depth 11, final iteration count: 62,451,020. Final time: 3657.392127 seconds, or 60.956535 minutes, or 1.015942 hours.
+Solution not found to Level 5 with Max Depth 12, final iteration count: 287,696,045. Final time: 13776.352578 seconds, or 229.605876 minutes, or 3.826765 hours.
+Solution not found to Level 5 with Max Depth 13, final iteration count: 1,327,493,424. Final time: 69636.492869 seconds, or 1160.608214 minutes, or 19.343470 hours.
+Solution not found to Level 5 with Max Depth 14, final iteration count: 6,042,565,819. Final time: 361389.375881 seconds, or 6023.156265 minutes, or 100.385938 hours.
