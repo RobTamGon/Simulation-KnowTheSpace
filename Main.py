@@ -5,7 +5,7 @@ from Algorithms.GeneticAlgorithm import Generation_Creation_Parameters, Fitness_
 
 # Levels to run the Algorithms in
 Levels: list[int] = [
-	1, 2, 3
+	7
 ]
 
 
@@ -45,7 +45,7 @@ Crossover_Parameters: Crossover_Fusion_Parameters = Crossover_Fusion_Parameters(
 	Search_Start_Percent = 0.2,
 	Search_End_Percent = 1.0,
 
-	# Fallback_Parameters=Crossover_Fusion_Bi_BFS_Fallback_Parameters()
+	# Fallback_Parameters = Crossover_Fusion_Bi_BFS_Fallback_Parameters()
 	Fallback_Parameters = Crossover_Fusion_Cut_And_Generation_Fallback_Parameters(
 		Cut_And_Generation_Parameters = Mutate_Cut_And_Generation_Parameters(
 			Random_Cut_Start_Percent = 0.3

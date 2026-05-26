@@ -40,4 +40,8 @@ Explore Reinforcement learning.
 
 ---
 
+Fix issue *Crossover* with ```Crossover_Fusion_Cut_And_Generation``` where it could get the entire *Generation* stuck, with each one making *Loops*.
+
+---
+
 Try my own Original Algorithm.

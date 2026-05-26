@@ -1,0 +1,92 @@
+Created first generation. Total time: 0.086 seconds, or 0.001 minutes, or 0.000 hours.
+
+Generation 1
+
+Evaluated Fitness of Generation 1. Total time: 0.177 seconds, or 0.003 minutes, or 0.000 hours.
+Description of fittest Individual:
+- Fitness: 600.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 0
+
+Actions:
+1: Slide Room in (1, 0) Down
+2: Slide Room in (0, 0) Right
+3: Move Explorer in (0, 2) Right
+4: Slide Room in (1, 0) Left
+5: Slide Room in (2, 0) Left
+6: Move Explorer in (1, 2) Up
+7: Move Explorer in (1, 1) Up
+8: Move Explorer in (1, 0) Left
+9: Move Explorer in (0, 0) Down
+10: Slide Room in (2, 1) Up
+
+Selected parents of the next Generation. Total time: 0.177 seconds, or 0.003 minutes, or 0.000 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 0.414 seconds, or 0.007 minutes, or 0.000 hours.
+
+Applied Mutations to the next Generation. Total time: 0.493 seconds, or 0.008 minutes, or 0.000 hours.
+
+Generation 2
+
+Evaluated Fitness of Generation 2. Total time: 0.624 seconds, or 0.010 minutes, or 0.000 hours.
+Description of fittest Individual:
+- Fitness: 650.0
+- Did it beat the Level: No
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 0
+
+Actions:
+1: Slide Room in (1, 0) Down
+2: Slide Room in (0, 0) Right
+3: Move Explorer in (0, 2) Right
+4: Slide Room in (1, 0) Left
+5: Slide Room in (2, 0) Left
+6: Move Explorer in (1, 2) Up
+7: Move Explorer in (1, 1) Up
+8: Move Explorer in (1, 0) Left
+9: Move Explorer in (0, 0) Down
+10: Slide Room in (2, 1) Up
+11: Slide Room in (2, 2) Up
+12: Slide Room in (1, 2) Right
+13: Move Explorer in (0, 1) Up
+14: Slide Room in (2, 2) Left
+15: Slide Room in (2, 1) Down
+
+Selected parents of the next Generation. Total time: 0.625 seconds, or 0.010 minutes, or 0.000 hours.
+
+Performed Crossing over of the parents, next Generation created. Total time: 1.445 seconds, or 0.024 minutes, or 0.000 hours.
+
+Applied Mutations to the next Generation. Total time: 1.531 seconds, or 0.026 minutes, or 0.000 hours.
+
+Generation 3
+
+Evaluated Fitness of Generation 3. Total time: 1.679 seconds, or 0.028 minutes, or 0.000 hours.
+Description of fittest Individual:
+- Fitness: 1001660.0
+- Did it beat the Level: Yes
+- Did it loop: No
+- Keys obtained: 1
+- Keys used: 1
+
+Actions:
+1: Slide Room in (1, 0) Down
+2: Move Explorer in (0, 2) Right
+3: Slide Room in (2, 0) Left
+4: Move Explorer in (1, 2) Up
+5: Move Explorer in (1, 1) Up
+6: Move Explorer in (1, 0) Left
+7: Move Explorer in (0, 0) Down
+8: Slide Room in (2, 1) Up
+9: Move Explorer in (0, 1) Up
+10: Move Explorer in (0, 0) Right
+11: Move Explorer in (1, 0) Down
+12: Move Explorer in (1, 1) Down
+13: Slide Room in (1, 1) Right
+14: Slide Room in (1, 0) Down
+15: Slide Room in (0, 0) Right
+16: Move Explorer in (1, 2) Right (Winning Action)
+17: Move Explorer in (2, 2) Left
+18: Move Explorer in (1, 2) Up
