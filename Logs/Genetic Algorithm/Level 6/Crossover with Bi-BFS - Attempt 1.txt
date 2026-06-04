@@ -10535,6 +10535,7 @@ Generation 61
 Evaluated Fitness of Generation 61. Total time: 136.040 seconds, or 2.267 minutes, or 0.038 hours.
 Description of fittest Individual:
 - Fitness: 1004580.0
+- Action history length: 310
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

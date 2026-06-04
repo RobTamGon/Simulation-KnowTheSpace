@@ -1,4 +1,4 @@
-Solution found to Level 1 with length 2, final iteration count: 3, unique states visited: 3. Final time: 0.000 seconds, or 0.000 minutes, or 0.000 hours.
+Solution found to Level 1 with length 2, final iteration count: 3, unique states visited: 3. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
 Actions:
 Move Explorer in Vector2(x=0, y=0) Right
 Move Explorer in Vector2(x=1, y=0) Right
@@ -12,7 +12,7 @@ Move Explorer in Vector2(x=0, y=1) Right
 Move Explorer in Vector2(x=1, y=1) Up
 Action history verified.
 
-Solution found to Level 3 with length 8, final iteration count: 708, unique states visited: 323. Final time: 0.038 seconds, or 0.001 minutes, or 0.000 hours.
+Solution found to Level 3 with length 8, final iteration count: 708, unique states visited: 323. Final time: 0.039 seconds, or 0.001 minutes, or 0.000 hours.
 Actions:
 Slide Room in Vector2(x=0, y=1) Right
 Slide Room in Vector2(x=0, y=0) Down
@@ -24,7 +24,7 @@ Move Explorer in Vector2(x=1, y=1) Down
 Move Explorer in Vector2(x=1, y=2) Right
 Action history verified.
 
-Solution found to Level 4 with length 24, final iteration count: 91,369, unique states visited: 36,341. Final time: 36.595 seconds, or 0.610 minutes, or 0.010 hours.
+Solution found to Level 4 with length 24, final iteration count: 91,369, unique states visited: 36,341. Final time: 39.985 seconds, or 0.666 minutes, or 0.011 hours.
 Actions:
 Slide Room in Vector2(x=0, y=1) Right
 Slide Room in Vector2(x=0, y=2) Up
@@ -50,56 +50,5 @@ Slide Room in Vector2(x=1, y=0) Down
 Move Explorer in Vector2(x=0, y=1) Down
 Move Explorer in Vector2(x=0, y=2) Up
 Move Explorer in Vector2(x=0, y=1) Right
-Action history verified.
-
-Solution found to Level 5 with length 47, final iteration count: 775,662, unique states visited: 174,503. Final time: 6115.641 seconds, or 101.927 minutes, or 1.699 hours.
-Actions:
-Slide Room in Vector2(x=2, y=0) Right
-Slide Room in Vector2(x=1, y=0) Right
-Slide Room in Vector2(x=0, y=0) Right
-Slide Room in Vector2(x=0, y=1) Up
-Slide Room in Vector2(x=0, y=2) Up
-Slide Room in Vector2(x=2, y=2) Left
-Slide Room in Vector2(x=1, y=2) Left
-Slide Room in Vector2(x=3, y=2) Left
-Slide Room in Vector2(x=2, y=2) Left
-Slide Room in Vector2(x=3, y=1) Down
-Slide Room in Vector2(x=3, y=0) Down
-Slide Room in Vector2(x=2, y=0) Right
-Slide Room in Vector2(x=1, y=0) Right
-Slide Room in Vector2(x=0, y=0) Right
-Slide Room in Vector2(x=0, y=1) Up
-Slide Room in Vector2(x=0, y=2) Up
-Slide Room in Vector2(x=1, y=2) Left
-Move Explorer in Vector2(x=1, y=1) Up
-Slide Room in Vector2(x=1, y=1) Right
-Slide Room in Vector2(x=2, y=1) Down
-Slide Room in Vector2(x=2, y=2) Left
-Slide Room in Vector2(x=3, y=2) Left
-Slide Room in Vector2(x=2, y=2) Up
-Slide Room in Vector2(x=2, y=1) Left
-Slide Room in Vector2(x=1, y=2) Right
-Slide Room in Vector2(x=2, y=2) Up
-Slide Room in Vector2(x=3, y=1) Down
-Slide Room in Vector2(x=3, y=2) Left
-Slide Room in Vector2(x=2, y=2) Left
-Slide Room in Vector2(x=2, y=1) Down
-Slide Room in Vector2(x=1, y=1) Right
-Slide Room in Vector2(x=2, y=2) Right
-Slide Room in Vector2(x=3, y=2) Up
-Slide Room in Vector2(x=2, y=1) Down
-Slide Room in Vector2(x=2, y=2) Right
-Slide Room in Vector2(x=1, y=2) Right
-Slide Room in Vector2(x=2, y=2) Up
-Slide Room in Vector2(x=2, y=1) Left
-Move Explorer in Vector2(x=1, y=0) Down
-Move Explorer in Vector2(x=1, y=1) Up
-Slide Room in Vector2(x=1, y=1) Right
-Slide Room in Vector2(x=2, y=1) Down
-Slide Room in Vector2(x=2, y=2) Left
-Slide Room in Vector2(x=3, y=2) Left
-Slide Room in Vector2(x=2, y=2) Up
-Slide Room in Vector2(x=2, y=1) Left
-Move Explorer in Vector2(x=1, y=0) Down
 Action history verified.
 

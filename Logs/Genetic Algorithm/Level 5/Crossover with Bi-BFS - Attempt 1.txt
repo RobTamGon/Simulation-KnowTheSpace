@@ -34251,6 +34251,7 @@ Generation 113
 Evaluated Fitness of Generation 113. Total time: 5703.209 seconds, or 95.053 minutes, or 1.584 hours.
 Description of fittest Individual:
 - Fitness: 1008700.0
+- Action history length: 570
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

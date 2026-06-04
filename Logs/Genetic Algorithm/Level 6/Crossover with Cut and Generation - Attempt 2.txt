@@ -23827,6 +23827,7 @@ Generation 94
 Evaluated Fitness of Generation 94. Total time: 396.043 seconds, or 6.601 minutes, or 0.110 hours.
 Description of fittest Individual:
 - Fitness: 1006200.0
+- Action history length: 473
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

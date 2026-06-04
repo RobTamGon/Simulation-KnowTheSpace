@@ -8,7 +8,7 @@ from Algorithms.GeneticAlgorithm import Individual, Generation_Creation_Paramete
 
 
 # Runs the Backtracking Algorithm and Logs the results
-def Execute__Backtracking(_Levels: list[int], _Backtracking_Max_Depth: list[int]):
+def Execute__Backtracking(_Levels: list[int], _Backtracking_Max_Depth: list[int]) -> None:
 	"""
 	Runs the Backtracking Algorithm (BFS) and Logs the results in a separate File for each Level, containing:
 
@@ -61,7 +61,7 @@ def Execute__Backtracking(_Levels: list[int], _Backtracking_Max_Depth: list[int]
 
 
 # Runs the BFS Algorithm Benchmark and Logs the results
-def Execute__BFS_Benchmark(_Levels: list[int]):
+def Execute__BFS_Benchmark(_Levels: list[int]) -> None:
 	"""
 	Runs the BFS Algorithm Benchmark and Logs the results in a separate File for each Level, containing:
 
@@ -109,7 +109,7 @@ def Execute__BFS_Benchmark(_Levels: list[int]):
 		# 	print(f"{_Action}\n")
 
 # Runs the BFS Algorithm to find the amount of unique States up to each depth and Logs the results
-def Execute__BFS_Search_Space(_Levels: list[int], _BFS_Search_Max_Depth: list[int]):
+def Execute__BFS_Search_Space(_Levels: list[int], _BFS_Search_Max_Depth: list[int]) -> None:
 	"""
 	Runs the BFS Algorithm to find the amount of unique States up to each depth and Logs the results in a separate File for each Level.
 	"""
@@ -134,7 +134,7 @@ def Execute__BFS_Search_Space(_Levels: list[int], _BFS_Search_Max_Depth: list[in
 
 
 # Runs the Genetic Algorithm with the given Parameters to try to solve the given Levels, and Logs the results
-def Execute__Genetic_Algorithm(_Levels: list[int], _Filename_Prefix: str, _Attempt: int, _Max__Generations: int, _Stop_At__Beating_Level: bool, _Generation_Parameters: Generation_Creation_Parameters, _Fitness_Parameters: Fitness_Gameplay_Parameters, _Crossover_Parameters: Crossover_Fusion_Parameters, _Mutation_Parameters: Mutate_Random_Ending_Parameters | Mutate_Cut_And_Generation_Parameters):
+def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Attempt: int, _Max__Generations: int, _Stop_At__Beating_Level: bool, _Require__Beating_Level: bool, _Require__No_Loop_Fittest_Individual: bool, _Generation_Parameters: Generation_Creation_Parameters, _Fitness_Parameters: Fitness_Gameplay_Parameters, _Crossover_Parameters: Crossover_Fusion_Parameters, _Mutation_Parameters: Mutate_Random_Ending_Parameters | Mutate_Cut_And_Generation_Parameters) -> None:
 	"""
 	Runs the Genetic Algorithm with the given Generation, Fitness, Crossover and Mutation Parameters to try to solve the given Levels, and Logs the results in a separate File for each Level, containing:
 
@@ -147,78 +147,95 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _Filename_Prefix: str, _Attem
 		print(f"Level {_Level}")
 
 
-		with open(f"Logs/Genetic Algorithm/Level {_Level}/{_Filename_Prefix} - Attempt {_Attempt}.txt", "w") as File:
-			Initial_Time: float = time()
+		Has__Won: bool = False
 
 
-			Generation: list[Individual] = Create_Generation(_Generation_Parameters, _Level)
-			Elapsed_Time: float = time() - Initial_Time
+		while not Has__Won:
+			Has__Won = not _Require__Beating_Level
 
 
-			# print(f"Created first generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
-			File.write(f"Created first generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
+			with open(f"Logs/Genetic Algorithm/Level {_Level}/{_File__Name_Prefix} - Attempt {_Attempt}.txt", "w") as File:
+				Initial_Time: float = time()
 
 
-			for _Generation__Number in range(_Max__Generations):
-				print(f"\nGeneration {_Generation__Number + 1}\n")
-				File.write(f"Generation {_Generation__Number + 1}\n\n")
+				Generation: list[Individual] = Create_Generation(_Generation_Parameters, _Level)
+				Elapsed_Time: float = time() - Initial_Time
 
 
-				for _Individual in Generation:
-					Evaluate_Fitness(_Individual, _Fitness_Parameters, _Level)
+				# print(f"Created first generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
+				File.write(f"Created first generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
 
 
-				Fittest_Individual: Individual = None
-				Fittest_Individual_Game: Game = Game(_Level)
+				for _Generation__Number in range(_Max__Generations):
+					print(f"\nGeneration {_Generation__Number + 1}\n")
+					File.write(f"Generation {_Generation__Number + 1}\n\n")
 
 
-				for _Individual in Generation:
-					if not Fittest_Individual or _Individual.Fitness.Score > Fittest_Individual.Fitness.Score:
-						Fittest_Individual = _Individual
+					for _Individual in Generation:
+						Evaluate_Fitness(_Individual, _Fitness_Parameters, _Level)
 
 
-				Elapsed_Time = time() - Initial_Time
+					Fittest_Individual: Individual = None
+					Fittest_Individual_Game: Game = Game(_Level)
 
 
-				print(f"Evaluated Fitness of Generation {_Generation__Number + 1}. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nDescription of fittest Individual:\n- Fitness: {Fittest_Individual.Fitness.Score}\n- Did it beat the Level: {"Yes" if Fittest_Individual.Fitness.Description.Has__Won else "No"}\n- Did it loop: {"Yes" if Fittest_Individual.Fitness.Description.Has__Looped else "No"}\n- Keys obtained: {Fittest_Individual.Fitness.Description.Obtained__Keys}\n- Keys used: {Fittest_Individual.Fitness.Description.Used__Keys}")
-				# print("\nActions:\n")
-				File.write(f"Evaluated Fitness of Generation {_Generation__Number + 1}. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nDescription of fittest Individual:\n- Fitness: {Fittest_Individual.Fitness.Score}\n- Did it beat the Level: {"Yes" if Fittest_Individual.Fitness.Description.Has__Won else "No"}\n- Did it loop: {"Yes" if Fittest_Individual.Fitness.Description.Has__Looped else "No"}\n- Keys obtained: {Fittest_Individual.Fitness.Description.Obtained__Keys}\n- Keys used: {Fittest_Individual.Fitness.Description.Used__Keys}\n\nActions:\n")
+					for _Individual in Generation:
+						if not Fittest_Individual or _Individual.Fitness.Score > Fittest_Individual.Fitness.Score:
+							Fittest_Individual = _Individual
 
 
-				for _Action__Index, _Action in enumerate(Fittest_Individual.Action_History):
-					Fittest_Individual_Game.Execute_Action(_Action)
+					Elapsed_Time = time() - Initial_Time
 
 
-					# print(f"{_Action__Index}: {f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}")
-					File.write(f"{_Action__Index + 1}: {f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}{" (Winning Action)" if Fittest_Individual_Game.Has__Won() else ""}\n")
+					print(f"Evaluated Fitness of Generation {_Generation__Number + 1}. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nDescription of fittest Individual:\n- Fitness: {Fittest_Individual.Fitness.Score}\n- Action history length: {len(Fittest_Individual.Action_History)}\n- Did it beat the Level: {"Yes" if Fittest_Individual.Fitness.Description.Has__Won else "No"}\n- Did it loop: {"Yes" if Fittest_Individual.Fitness.Description.Has__Looped else "No"}\n- Keys obtained: {Fittest_Individual.Fitness.Description.Obtained__Keys}\n- Keys used: {Fittest_Individual.Fitness.Description.Used__Keys}")
+					# print("\nActions:\n")
+					File.write(f"Evaluated Fitness of Generation {_Generation__Number + 1}. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nDescription of fittest Individual:\n- Fitness: {Fittest_Individual.Fitness.Score}\n- Action history length: {len(Fittest_Individual.Action_History)}\n- Did it beat the Level: {"Yes" if Fittest_Individual.Fitness.Description.Has__Won else "No"}\n- Did it loop: {"Yes" if Fittest_Individual.Fitness.Description.Has__Looped else "No"}\n- Keys obtained: {Fittest_Individual.Fitness.Description.Obtained__Keys}\n- Keys used: {Fittest_Individual.Fitness.Description.Used__Keys}\n\nActions:\n")
 
 
-				if _Stop_At__Beating_Level and Fittest_Individual.Fitness.Description.Has__Won:
-					break
+					if Fittest_Individual.Fitness.Description.Has__Looped and _Require__No_Loop_Fittest_Individual:
+						print(f"\nThe entire Generation ({_Generation__Number + 1}) has reached a looping State")
 
 
-				Parents: list[Individual] = Select_Parents(Generation)
-				Elapsed_Time = time() - Initial_Time
+						break
 
 
-				# print(f"\nSelected parents of the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
-				File.write(f"\nSelected parents of the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
+					for _Action__Index, _Action in enumerate(Fittest_Individual.Action_History):
+						Fittest_Individual_Game.Execute_Action(_Action)
 
 
-				Generation = Perform_Crossover(Parents, _Crossover_Parameters, _Level)
-				Elapsed_Time = time() - Initial_Time
+						# print(f"{_Action__Index}: {f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}")
+						File.write(f"{_Action__Index + 1}: {f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}{" (Winning Action)" if Fittest_Individual_Game.Has__Won() else ""}\n")
 
 
-				# print(f"Performed Crossing over of the parents, next Generation created. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
-				File.write(f"Performed Crossing over of the parents, next Generation created. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
+					if _Stop_At__Beating_Level and Fittest_Individual.Fitness.Description.Has__Won:
+						Has__Won = True
 
 
-				for _Individual in Generation:
-					Apply_Mutation(_Individual, _Level, _Mutation_Parameters)
-				
-				
-				Elapsed_Time = time() - Initial_Time
+						break
 
 
-				# print(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.")
-				File.write(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n{"\n" if _Generation__Number < _Max__Generations - 1 else ""}")
+					Parents: list[Individual] = Select_Parents(Generation)
+					Elapsed_Time = time() - Initial_Time
+
+
+					# print(f"\nSelected parents of the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
+					File.write(f"\nSelected parents of the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
+
+
+					Generation = Perform_Crossover(Parents, _Crossover_Parameters, _Level)
+					Elapsed_Time = time() - Initial_Time
+
+
+					# print(f"Performed Crossing over of the parents, next Generation created. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
+					File.write(f"Performed Crossing over of the parents, next Generation created. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n\n")
+
+
+					for _Individual in Generation:
+						Apply_Mutation(_Individual, _Level, _Mutation_Parameters)
+					
+					
+					Elapsed_Time = time() - Initial_Time
+
+
+					# print(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.")
+					File.write(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n{"\n" if _Generation__Number < _Max__Generations - 1 else ""}")

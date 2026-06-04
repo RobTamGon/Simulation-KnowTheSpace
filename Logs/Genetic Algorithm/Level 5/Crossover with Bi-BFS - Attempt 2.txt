@@ -74921,6 +74921,7 @@ Generation 169
 Evaluated Fitness of Generation 169. Total time: 4333.550 seconds, or 72.226 minutes, or 1.204 hours.
 Description of fittest Individual:
 - Fitness: 1009980.0
+- Action history length: 850
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

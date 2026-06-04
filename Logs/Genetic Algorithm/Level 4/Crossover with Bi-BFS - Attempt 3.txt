@@ -4826,6 +4826,7 @@ Generation 40
 Evaluated Fitness of Generation 40. Total time: 114.544 seconds, or 1.909 minutes, or 0.032 hours.
 Description of fittest Individual:
 - Fitness: 1005050.0
+- Action history length: 205
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

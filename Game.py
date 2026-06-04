@@ -173,7 +173,7 @@ class Action:
 	# Gets the Reversed Action
 	def Reversed(self) -> "Action":
 		"""
-		Creates and returns an independent Action with Reversed parameters.
+		Creates and returns an independent Action with Reversed Parameters.
 		"""
 
 

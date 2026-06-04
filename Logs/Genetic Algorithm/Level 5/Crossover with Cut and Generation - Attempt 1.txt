@@ -24221,6 +24221,7 @@ Generation 97
 Evaluated Fitness of Generation 97. Total time: 353.396 seconds, or 5.890 minutes, or 0.098 hours.
 Description of fittest Individual:
 - Fitness: 1007710.0
+- Action history length: 474
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

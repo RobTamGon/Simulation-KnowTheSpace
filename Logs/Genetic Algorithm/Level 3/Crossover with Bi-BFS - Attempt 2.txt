@@ -33,6 +33,7 @@ Generation 2
 Evaluated Fitness of Generation 2. Total time: 0.668 seconds, or 0.011 minutes, or 0.000 hours.
 Description of fittest Individual:
 - Fitness: 1001640.0
+- Action history length: 15
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

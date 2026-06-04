@@ -47619,6 +47619,7 @@ Generation 134
 Evaluated Fitness of Generation 134. Total time: 543.034 seconds, or 9.051 minutes, or 0.151 hours.
 Description of fittest Individual:
 - Fitness: 1009730.0
+- Action history length: 675
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

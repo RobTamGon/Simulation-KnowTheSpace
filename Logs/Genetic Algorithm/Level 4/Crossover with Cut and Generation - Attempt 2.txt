@@ -2623,6 +2623,7 @@ Generation 30
 Evaluated Fitness of Generation 30. Total time: 49.928 seconds, or 0.832 minutes, or 0.014 hours.
 Description of fittest Individual:
 - Fitness: 1004450.0
+- Action history length: 147
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

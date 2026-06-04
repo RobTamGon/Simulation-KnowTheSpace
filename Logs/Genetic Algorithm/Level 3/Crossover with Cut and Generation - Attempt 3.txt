@@ -147,6 +147,7 @@ Generation 5
 Evaluated Fitness of Generation 5. Total time: 7.470 seconds, or 0.124 minutes, or 0.002 hours.
 Description of fittest Individual:
 - Fitness: 1001790.0
+- Action history length: 30
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

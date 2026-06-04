@@ -204,7 +204,7 @@ class State:
 
 
 # Bidirectional BFS Algorithm
-def Bi_BFS(_Game_A: Game, _Game_B: Game) -> tuple[list[Action], float]:
+def Bi_BFS(_Game_A: Game, _Game_B: Game, _Max__Depth: int = -1) -> tuple[list[Action], float] | None:
 	"""
 	Implementation of the Bidirectional BFS algorithm, tracks the elapsed time until reaching a common State between _Game_A and _Game_B.
 
@@ -243,8 +243,12 @@ def Bi_BFS(_Game_A: Game, _Game_B: Game) -> tuple[list[Action], float]:
 
 
 	while not Found_Solution:
+		if _Max__Depth != -1 and Current_Depth_A > _Max__Depth:
+			return None
+
+
 		if Current_Depth_A >= 10:
-			print(f"Bi-BFS is searching deeply, current depth: {Current_Depth_A}")
+			print(f"Bi-BFS is searching deeply, current depth: {Current_Depth_A} | {Current_Depth_B}")
 
 
 		if not Initialized_First_Queues:

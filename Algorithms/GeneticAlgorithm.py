@@ -30,8 +30,13 @@ class Individual:
 
 @dataclass
 class Generation_Creation_Parameters:
-	Generation_Size: int
+	Generation__Size: int
 	Actions__Amount: int
+
+
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return f"Generation Version: Creation. Parameters:\n{"  " * _Indentation__Amount}- Generation__Size: {self.Generation__Size}\n{"  " * _Indentation__Amount}- Actions__Amount: {self.Actions__Amount}"
 
 
 
@@ -44,14 +49,20 @@ class Fitness_Gameplay_Parameters:
 	Has__Looped__Penalty: float
 
 
+	# Returns a string representing itself
+	def __str__(self) -> str:
+		return f"Fitness Version: Gameplay. Parameters:\n- Length__Weight: {self.Length__Weight}\n- Obtained_Keys__Bonus: {self.Obtained_Keys__Bonus}\n- Used_Keys__Bonus: {self.Used_Keys__Bonus}\n- Has__Won__Bonus: {self.Has__Won__Bonus}\n- Has__Looped__Penalty: {self.Has__Looped__Penalty}"
+
+
 
 @dataclass
 class Crossover_Fusion_Bi_BFS_Fallback_Parameters:
-	pass
+	Max__Depth: int = -1
 
-@dataclass
-class Crossover_Fusion_Regeneration_Fallback_Parameters:
-	Generation_Parameters: Generation_Creation_Parameters
+
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return f"Crossover Fallback Version: Bi-BFS. Parameters:\n{"  " * _Indentation__Amount}- Max__Depth: {self.Max__Depth}"
 
 
 @dataclass
@@ -60,13 +71,34 @@ class Mutate_Cut_And_Generation_Parameters:
 	Last_Actions_To_Change: int = 0
 
 
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return f"Mutation Version: Cut and Generation. Parameters:\n{"  " * _Indentation__Amount}- Random_Cut_Start_Percent: {self.Random_Cut_Start_Percent}\n{"  " * _Indentation__Amount}- Last_Actions_To_Change: {self.Last_Actions_To_Change}"
+
+
 @dataclass
 class Crossover_Fusion_Cut_And_Generation_Fallback_Parameters:
 	Cut_And_Generation_Parameters: Mutate_Cut_And_Generation_Parameters
 
+
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return f"Crossover Fallback Version: Cut and Generation. Parameters:\n{"  " * _Indentation__Amount}- Cut_And_Generation_Parameters: {self.Cut_And_Generation_Parameters.__str__(_Indentation__Amount + 1)}"
+
+@dataclass
+class Crossover_Fusion_Regeneration_Fallback_Parameters:
+	Generation_Parameters: Generation_Creation_Parameters
+
+
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return f"Crossover Fallback Version: Regeneration. Parameters:\n{"  " * _Indentation__Amount}- Generation_Parameters: {self.Generation_Parameters.__str__(_Indentation__Amount + 1)}"
+
 @dataclass
 class Crossover_Fusion_Clone_Fallback_Parameters:
-	pass
+	# Returns a string representing itself
+	def __str__(self, _Indentation__Amount: int = 0) -> str:
+		return "Crossover Fallback Version: Clone (doesn't have any Parameters)"
 
 @dataclass
 class Crossover_Fusion_Parameters:
@@ -76,10 +108,20 @@ class Crossover_Fusion_Parameters:
 	Fallback_Parameters: Crossover_Fusion_Bi_BFS_Fallback_Parameters | Crossover_Fusion_Regeneration_Fallback_Parameters |  Crossover_Fusion_Cut_And_Generation_Fallback_Parameters | Crossover_Fusion_Clone_Fallback_Parameters
 
 
+	# Returns a string representing itself
+	def __str__(self) -> str:
+		return f"Crossover Version: Fusion. Parameters:\n- Search_Start_Percent: {self.Search_Start_Percent}\n- Search_End_Percent: {self.Search_End_Percent}\n- Fallback_Parameters: {self.Fallback_Parameters.__str__(1)}"
+
+
 
 @dataclass
 class Mutate_Random_Ending_Parameters:
 	New_Actions__Amount: int
+
+
+	# Returns a string representing itself
+	def __str__(self) -> str:
+		return f"Mutation Version: Random Ending. Parameters:\n- New_Actions__Amount: {self.New_Actions__Amount}"
 
 
 
@@ -93,7 +135,7 @@ def Create_Generation(_Parameters: Generation_Creation_Parameters, _Level: int) 
 	Generation: list[Individual] = []
 
 
-	for _ in range(_Parameters.Generation_Size):
+	for _ in range(_Parameters.Generation__Size):
 		Individual_Game: Game = Game(_Level)
 		_Individual: Individual = Individual()
 
@@ -218,7 +260,7 @@ def Crossover_Fusion(_Generation: list[Individual], _Parameters: Crossover_Fusio
 
 	- If the Individuals share a State, the shortest Action history to it between the two is kept for both children, and then each parent's following Action history is added to one child.
 	- If no more Individuals share a State, the given Fallback is performed, which can be:
-		- For each Individual, a random State is chosen, it gets crossed with the next available Individual, which also gets a random State chosen. The first child will have the first parent's Action history up to the chosen State, then this State will get connected with the chosen State of the other parent with Bi-BFS, adding the rest of its Action history afterwards. The second child will be a clone of the most Fit parent.
+		- For each Individual, a random State is chosen, it gets crossed with the next available Individual, which also gets a random State chosen. The second child will have the first parent's Action history up to the chosen State, then this State will get connected with the chosen State of the other parent with Bi-BFS, adding the rest of its Action history afterwards. The first child will be a clone of the most Fit parent. If the Bi-BFS reaches the given maximum depth, the second child will be a clone of the other parent.
 		- Regenerate each Individual with a given amount of starting Actions.
 		- For each Individual, apply the Mutation Cut and Generation, which selects some starting part of the Action history, and generates Actions until reaching the original Action history's length.
 		- Clone each Individual.
@@ -314,23 +356,23 @@ def Crossover_Fusion(_Generation: list[Individual], _Parameters: Crossover_Fusio
 						Game_B.Execute_Action(_Generation[i_B].Action_History[i])
 
 
-					Bi_BFS_Actions: list[Action] = Bi_BFS(Game_A, Game_B)[0]
-
-
-					Next_Generation.append(Individual(_Generation[i_A].Action_History[: State_A__Index] + Bi_BFS_Actions + _Generation[i_B].Action_History[State_B__Index :]))
 					Next_Generation.append(Individual(_Generation[i_A].Action_History.copy() if _Generation[i_A].Fitness.Score >= _Generation[i_B].Fitness.Score else _Generation[i_B].Action_History.copy()))
+
+
+					Bi_BFS_Actions: tuple[list[Action], float] | None = Bi_BFS(Game_A, Game_B, _Parameters.Fallback_Parameters.Max__Depth)
+
+
+					if Bi_BFS_Actions:
+						Bi_BFS_Actions = Bi_BFS_Actions[0]
+
+
+						Next_Generation.append(Individual(_Generation[i_A].Action_History[: State_A__Index] + Bi_BFS_Actions + _Generation[i_B].Action_History[State_B__Index :]))
+					else:
+						Next_Generation.append(Individual(_Generation[i_A].Action_History.copy() if _Generation[i_A].Fitness.Score < _Generation[i_B].Fitness.Score else _Generation[i_B].Action_History.copy()))
+
 
 					Processed_Indices.append(i_A)
 					Processed_Indices.append(i_B)
-
-		case Crossover_Fusion_Regeneration_Fallback_Parameters():
-			Next_Generation += Create_Generation(
-				Generation_Creation_Parameters(
-					_Parameters.Fallback_Parameters.Generation_Parameters.Generation_Size - len(Next_Generation),
-					_Parameters.Fallback_Parameters.Generation_Parameters.Actions__Amount
-				),
-				_Level
-			)
 
 		case Crossover_Fusion_Cut_And_Generation_Fallback_Parameters():
 			for i, _Individual in enumerate(_Generation):
@@ -338,11 +380,20 @@ def Crossover_Fusion(_Generation: list[Individual], _Parameters: Crossover_Fusio
 					continue
 
 
-				New_Individual: Individual = Individual(Action_History = _Individual.Action_History)
+				New_Individual: Individual = Individual(_Individual.Action_History)
 				Mutate_Cut_And_Generation(New_Individual, _Parameters.Fallback_Parameters.Cut_And_Generation_Parameters, _Level)
 
 
 				Next_Generation.append(New_Individual)
+
+		case Crossover_Fusion_Regeneration_Fallback_Parameters():
+			Next_Generation += Create_Generation(
+				Generation_Creation_Parameters(
+					_Parameters.Fallback_Parameters.Generation_Parameters.Generation__Size - len(Next_Generation),
+					_Parameters.Fallback_Parameters.Generation_Parameters.Actions__Amount
+				),
+				_Level
+			)
 
 		case Crossover_Fusion_Clone_Fallback_Parameters():
 			for i, _Individual in enumerate(_Generation):
@@ -350,7 +401,7 @@ def Crossover_Fusion(_Generation: list[Individual], _Parameters: Crossover_Fusio
 					continue
 				
 
-				Next_Generation.append(Individual(Action_History = _Individual.Action_History))
+				Next_Generation.append(Individual(_Individual.Action_History.copy()))
 
 
 	return Next_Generation
@@ -412,7 +463,7 @@ def Mutate_Cut_And_Generation(_Individual: Individual, _Parameters: Mutate_Cut_A
 		if _Parameters.Random_Cut_Start_Percent != -1.0:
 			_Individual.Action_History = _Individual.Action_History[: randint(int(_Parameters.Random_Cut_Start_Percent * len(_Individual.Action_History)), len(_Individual.Action_History))]
 		else:
-			_Individual.Action_History = _Individual.Action_History[: len(_Individual.Action_History) - _Parameters.Last_Actions_To_Change]
+			_Individual.Action_History = _Individual.Action_History[: max(0, len(_Individual.Action_History) - _Parameters.Last_Actions_To_Change)]
 
 
 	for _Action__Index in range(len(_Individual.Action_History)):
@@ -441,5 +492,5 @@ def Apply_Mutation(_Individual: Individual, _Level: int, _Parameters: Mutate_Ran
 		case Mutate_Random_Ending_Parameters():
 			Mutate_Random_Ending(_Individual, _Parameters, _Level)
 		
-		case _:
-			Mutate_Cut_And_Generation(_Individual, _Level)
+		case Mutate_Cut_And_Generation_Parameters():
+			Mutate_Cut_And_Generation(_Individual, _Parameters, _Level)

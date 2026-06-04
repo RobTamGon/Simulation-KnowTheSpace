@@ -2516,6 +2516,7 @@ Generation 28
 Evaluated Fitness of Generation 28. Total time: 443.443 seconds, or 7.391 minutes, or 0.123 hours.
 Description of fittest Individual:
 - Fitness: 1002950.0
+- Action history length: 145
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

@@ -3569,6 +3569,7 @@ Generation 34
 Evaluated Fitness of Generation 34. Total time: 78.325 seconds, or 1.305 minutes, or 0.022 hours.
 Description of fittest Individual:
 - Fitness: 1003240.0
+- Action history length: 175
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

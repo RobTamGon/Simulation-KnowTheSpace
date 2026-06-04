@@ -5,6 +5,7 @@ Generation 1
 Evaluated Fitness of Generation 1. Total time: 0.138 seconds, or 0.002 minutes, or 0.000 hours.
 Description of fittest Individual:
 - Fitness: 1000020.0
+- Action history length: 10
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 0

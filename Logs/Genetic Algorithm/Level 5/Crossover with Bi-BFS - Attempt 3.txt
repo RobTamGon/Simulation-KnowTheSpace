@@ -106732,6 +106732,7 @@ Generation 204
 Evaluated Fitness of Generation 204. Total time: 6117.281 seconds, or 101.955 minutes, or 1.699 hours.
 Description of fittest Individual:
 - Fitness: 1014660.0
+- Action history length: 1017
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 3

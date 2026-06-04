@@ -4371,6 +4371,7 @@ Generation 38
 Evaluated Fitness of Generation 38. Total time: 106.630 seconds, or 1.777 minutes, or 0.030 hours.
 Description of fittest Individual:
 - Fitness: 1004940.0
+- Action history length: 195
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

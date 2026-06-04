@@ -5967,6 +5967,7 @@ Generation 45
 Evaluated Fitness of Generation 45. Total time: 132.014 seconds, or 2.200 minutes, or 0.037 hours.
 Description of fittest Individual:
 - Fitness: 1005260.0
+- Action history length: 230
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

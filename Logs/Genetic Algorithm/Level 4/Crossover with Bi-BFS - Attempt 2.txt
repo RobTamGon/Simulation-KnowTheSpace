@@ -852,6 +852,7 @@ Generation 15
 Evaluated Fitness of Generation 15. Total time: 39.728 seconds, or 0.662 minutes, or 0.011 hours.
 Description of fittest Individual:
 - Fitness: 1003770.0
+- Action history length: 80
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

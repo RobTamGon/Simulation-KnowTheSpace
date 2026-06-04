@@ -66,6 +66,7 @@ Generation 3
 Evaluated Fitness of Generation 3. Total time: 1.679 seconds, or 0.028 minutes, or 0.000 hours.
 Description of fittest Individual:
 - Fitness: 1001660.0
+- Action history length: 18
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 1

@@ -950,6 +950,7 @@ Generation 16
 Evaluated Fitness of Generation 16. Total time: 28.307 seconds, or 0.472 minutes, or 0.008 hours.
 Description of fittest Individual:
 - Fitness: 1003850.0
+- Action history length: 85
 - Did it beat the Level: Yes
 - Did it loop: No
 - Keys obtained: 2

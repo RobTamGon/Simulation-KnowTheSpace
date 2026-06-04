@@ -16,11 +16,11 @@ In ```Crossover_Fusion```, make a way to maximize the amount of *Individual*s th
 
 ---
 
-Maybe make *Level*, *Room* and *Explorer* ```dataclasses```? (also, check ```NamedTuple```, maybe some things would be better being that).
+Maybe make *Level*, *Room* and *Explorer* ```dataclasse```s? (also, check ```NamedTuple```, maybe some things would be better being that).
 
 ---
 
-Comment all ```dataclasses``` and ```enums```.
+Comment all ```dataclasse```s and ```enum```s.
 
 ---
 
@@ -40,8 +40,28 @@ Explore Reinforcement learning.
 
 ---
 
-Fix issue *Crossover* with ```Crossover_Fusion_Cut_And_Generation``` where it could get the entire *Generation* stuck, with each one making *Loops*.
+Fix issue in *Crossover* with ```Crossover_Fusion_Cut_And_Generation``` where it could get the **entire** *Generation* stuck, with each one making *Loop*s.
 
 ---
 
 Try my own Original Algorithm.
+
+---
+
+Implement multi-threading.
+
+---
+
+Do a sensibility analysis of all the combinations of *Parameter*s and methods of the *Genetic Algorithm*.
+
+---
+
+Update all *Functions* that create Log files to include a ```_Delete_Files``` *Parameter* using ```os.remove()```.
+
+---
+
+In ```SensitivityAnalysis.py```, update ```Reference_Attempts__Amount``` to calculate the amount of *File*s in the *Folder* dynamically instead of hard-coding it.
+
+---
+
+Re-run all Reference attempts (to now include the line with the Action history length)
