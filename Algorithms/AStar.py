@@ -96,14 +96,14 @@ def AStar(_Game: Game) -> tuple[list[Action], float]:
 
 				New_Node.G_Cost = Current_Node.G_Cost + 1
 				New_Node.H_Cost = Get_Manhattan_H_Cost(New_Node.State)
-				New_Node.Final_Cost = (New_Node.G_Cost + New_Node.H_Cost) * 100000 + New_Node.H_Cost
+				New_Node.Final_Cost = New_Node.G_Cost + New_Node.H_Cost
 
 
 				for _Queue_Node in Queue:
 					if str(_Queue_Node[3].State) == str(New_Node.State) and _Queue_Node[3].Final_Cost > New_Node.Final_Cost:
 						New_Node__Is_In__Queue = True
 
-						_Queue_Node[3].Final_Cost = (New_Node.G_Cost + _Queue_Node[3].H_Cost) * 100000 + _Queue_Node[3].H_Cost
+						_Queue_Node[3].Final_Cost = New_Node.G_Cost + _Queue_Node[3].H_Cost
 
 
 						break
@@ -113,7 +113,7 @@ def AStar(_Game: Game) -> tuple[list[Action], float]:
 					Counter += 1
 
 
-					New_Node.Final_Cost = (New_Node.G_Cost + New_Node.H_Cost) * 100000 + New_Node.H_Cost
+					New_Node.Final_Cost = New_Node.G_Cost + New_Node.H_Cost
 
 					heapq.heappush(Queue, (New_Node.Final_Cost, New_Node.H_Cost, Counter, deepcopy(New_Node)))
 
