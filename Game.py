@@ -74,10 +74,10 @@ class Vector2:
 
 
 class Direction(Enum):
-	Left: Vector2 = Vector2(-1, 0)
-	Right: Vector2 = Vector2(1, 0)
-	Up: Vector2 = Vector2(0, -1)
-	Down: Vector2 = Vector2(0, 1)
+	Left = Vector2(-1, 0)
+	Right = Vector2(1, 0)
+	Up = Vector2(0, -1)
+	Down = Vector2(0, 1)
 
 
 
@@ -153,8 +153,8 @@ class Explorer_Undo_Data:
 
 
 class Action_Type(Enum):
-	Room__Slide: str = "Room.Slide"
-	Explorer__Move: str = "Explorer.Move"
+	Room__Slide = "Room.Slide"
+	Explorer__Move = "Explorer.Move"
 
 @dataclass
 class Undo_Action_Data:
@@ -326,6 +326,23 @@ class Game:
 			if _Explorer.Position == _Position:
 				return _Explorer
 		
+
+		return None
+
+
+	# Gets the Room instance that Has a Goal
+	def Index_Goal(self) -> Room:
+		"""
+		Finds and returns the Room instance that Has a Goal.
+		"""
+
+
+		for _Row in self.Rooms:
+			for _Room in _Row:
+				if _Room is not None and _Room.Has == "Goal":
+					return _Room
+
+
 
 		return None
 

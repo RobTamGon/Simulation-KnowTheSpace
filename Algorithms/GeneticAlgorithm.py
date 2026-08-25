@@ -380,7 +380,7 @@ def Crossover_Fusion(_Generation: list[Individual], _Parameters: Crossover_Fusio
 					continue
 
 
-				New_Individual: Individual = Individual(_Individual.Action_History)
+				New_Individual: Individual = Individual(_Individual.Action_History.copy())
 				Mutate_Cut_And_Generation(New_Individual, _Parameters.Fallback_Parameters.Cut_And_Generation_Parameters, _Level)
 
 

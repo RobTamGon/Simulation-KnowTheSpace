@@ -4,7 +4,8 @@ from time import time
 from Game import Game, Action_Type
 from Algorithms.BruteForce import Backtracking, BFS
 from Algorithms.GeneticAlgorithm import Individual, Generation_Creation_Parameters, Fitness_Gameplay_Parameters, Crossover_Fusion_Parameters, Mutate_Random_Ending_Parameters, Mutate_Cut_And_Generation_Parameters, Create_Generation, Evaluate_Fitness, Select_Parents, Perform_Crossover, Apply_Mutation
-
+from Algorithms.AStar import AStar
+from Utility import Display__Explorer_VS_Goal
 
 
 # Runs the Backtracking Algorithm and Logs the results
@@ -239,3 +240,45 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Att
 
 					# print(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.")
 					File.write(f"Applied Mutations to the next Generation. Total time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n{"\n" if _Generation__Number < _Max__Generations - 1 else ""}")
+
+
+
+# Runs the A* Algorithm and prints the results
+def Execute__AStar(_Levels: list[int]) -> None:
+	"""
+	Runs the A* Algorithm and prints the results.
+	"""
+
+
+	for _Level in _Levels:
+		G = Game(_Level)
+
+
+		print(f"Level {_Level}")
+
+
+		Actions, Elapsed_Time = AStar(G)
+
+
+		with open("Logs/AStar/Benchmark.txt", "a") as File:
+			File.write(f"Solution found to Level {_Level} with length {len(Actions)}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
+			print(f"\n\nSolution found to Level {_Level} with length {len(Actions)}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
+
+
+			for _Action in Actions:
+				Display__Explorer_VS_Goal(G)
+
+
+				File.write(f"{f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}\n")
+				print(f"\n\n{f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}\n")
+
+
+				G.Execute_Action(_Action)
+
+
+			if G.Has__Won():
+				Display__Explorer_VS_Goal(G)
+
+
+				File.write(f"Action history verified.\n{"\n" if _Level < _Levels[-1] else ""}")
+				print(f"\n\nAction history verified.\n{"\n" if _Level < _Levels[-1] else ""}")

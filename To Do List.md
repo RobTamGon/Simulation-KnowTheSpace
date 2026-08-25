@@ -44,15 +44,11 @@ Fix issue in *Crossover* with ```Crossover_Fusion_Cut_And_Generation``` where it
 
 ---
 
-Try my own Original Algorithm.
+Try my own Original Algorithms.
 
 ---
 
 Implement multi-threading.
-
----
-
-Do a sensibility analysis of all the combinations of *Parameter*s and methods of the *Genetic Algorithm*.
 
 ---
 
@@ -64,4 +60,16 @@ In ```SensitivityAnalysis.py```, update ```Reference_Attempts__Amount``` to calc
 
 ---
 
-Re-run all Reference attempts (to now include the line with the Action history length)
+Re-run all Reference attempts (to now include the line with the Action history length).
+
+---
+
+Switch to C++.
+
+---
+
+Clean ```ProcessSensitivityAnalysis.py```.
+
+---
+
+Fix in ```Utility.Get__Averaged_Sensitivity_Stats``` the division should be by ```_Attempts```, but instead by only the successful attempts, which would be ```Output.Total_Attempts - Output.Failed_Attempts``` once all the attempts have been checked (which means that this calculation should be refactored to happen outside of the ```for``` loop).

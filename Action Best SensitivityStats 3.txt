@@ -1,0 +1,3 @@
+Average Action history length: 9.333333333333334 actions
+Average elapsed time: 62.67866666666667 seconds
+No failed attempts out of 3 total.

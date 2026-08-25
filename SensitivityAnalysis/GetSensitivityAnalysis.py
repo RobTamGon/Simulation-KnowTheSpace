@@ -1,77 +1,11 @@
-from os import remove
 from copy import deepcopy
-
-from dataclasses import dataclass
 
 
 from ExecuteAlgorithms import Execute__Genetic_Algorithm
 
 from Algorithms.GeneticAlgorithm import Generation_Creation_Parameters, Fitness_Gameplay_Parameters, Crossover_Fusion_Parameters, Crossover_Fusion_Bi_BFS_Fallback_Parameters, Crossover_Fusion_Cut_And_Generation_Fallback_Parameters, Crossover_Fusion_Regeneration_Fallback_Parameters, Crossover_Fusion_Clone_Fallback_Parameters, Mutate_Random_Ending_Parameters, Mutate_Cut_And_Generation_Parameters
 
-
-@dataclass
-class Sensitivity_Stats:
-	Average_Action_History__Length: float = 0.0
-	Average_Elapsed_Time: float = 0.0
-
-	Failed_Attempts: int = 0
-	Total_Attempts: int = 0
-
-
-	# Returns a string representing itself
-	def __str__(self) -> str:
-		return f"Average Action history length: {self.Average_Action_History__Length} actions\nAverage elapsed time: {self.Average_Elapsed_Time} seconds\n{f"No failed attempts out of {self.Total_Attempts} total." if self.Failed_Attempts == 0 else f"Failed {self.Failed_Attempts}/{self.Total_Attempts} attempts."}"
-
-
-
-# Gets the averages of the Action history length and elapsed time of the given attempts with the given File name prefix at the Logs directory of the given Level.
-def Get__Averaged_Sensitivity_Stats(_Level: int, _File__Name_Prefix: str, _Attempts: int, _Delete_Files: bool = False) -> Sensitivity_Stats:
-	"""
-	Calculates and returns the averages of the Action history length and elapsed time of the given attempts with the given File name prefix at the Logs directory of the given Level.
-	"""
-
-
-	Output: Sensitivity_Stats = Sensitivity_Stats(Total_Attempts = _Attempts)
-
-
-	for _Attempt in range(_Attempts):
-		File = open(f"Logs/Genetic Algorithm/Level {_Level}/{_File__Name_Prefix} - Attempt {_Attempt + 1}.txt", "r")
-		Lines: list[str] = File.readlines()[:: -1]
-
-
-		if "- Did it beat the Level: Yes\n" not in Lines:
-			if _Delete_Files:
-				File.close()
-				remove(f"Logs/Genetic Algorithm/Level {_Level}/{_File__Name_Prefix} - Attempt {_Attempt + 1}.txt")
-
-
-			Output.Failed_Attempts += 1
-
-
-			continue
-
-
-		Pivot_Line__Index: int = Lines.index("- Did it beat the Level: Yes\n")
-
-		Action_History__Length_Start__Index: int = Lines[Pivot_Line__Index + 1].find(": ") + 2
-		Action_History__Length: int = int(Lines[Pivot_Line__Index + 1][Action_History__Length_Start__Index :])
-		Elapsed_Time_Start__Index: int = Lines[Pivot_Line__Index + 4].find(": ") + 2
-		Elapsed_Time_End__Index: int = Lines[Pivot_Line__Index + 4].find(" seconds")
-		Elapsed_Time: float = float(Lines[Pivot_Line__Index + 4][Elapsed_Time_Start__Index : Elapsed_Time_End__Index])
-
-
-		Output.Average_Action_History__Length += Action_History__Length / _Attempts
-		Output.Average_Elapsed_Time += Elapsed_Time / _Attempts
-
-
-		File.close()
-
-
-		if _Delete_Files:
-			remove(f"Logs/Genetic Algorithm/Level {_Level}/{_File__Name_Prefix} - Attempt {_Attempt + 1}.txt")
-	
-
-	return Output
+from SensitivityAnalysis.Utility import Sensitivity_Stats, Get__Averaged_Sensitivity_Stats
 
 
 # Generates Temporary Files for each attempt of the Genetic Algorithm to calculate the averaged Sensitivity stats, and Logs them in Output.txt, inside the Sensitivity Analysis Folder of the given Level
@@ -223,6 +157,7 @@ Mutation_Cut_And_Generation_Parameter_Last_Actions_To_Change__Range: list[float]
 
 
 # References
+Reference_File__Name_Prefix: str = "Crossover with Bi-BFS"
 Reference_Attempts__Amount: int = 3
 
 
@@ -230,11 +165,11 @@ Generation_Parameters: Generation_Creation_Parameters = deepcopy(Nominal_Generat
 Fitness_Parameters: Fitness_Gameplay_Parameters = deepcopy(Nominal_Fitness_Parameters)
 Crossover_Parameters: Crossover_Fusion_Parameters = deepcopy(Nominal_Crossover_Parameters)
 Mutation_Parameters: Mutate_Random_Ending_Parameters | Mutate_Cut_And_Generation_Parameters = deepcopy(Nominal_Mutation_Parameters)
-Reference_Sensitivity_Stats: Sensitivity_Stats = Get__Averaged_Sensitivity_Stats(3, "Crossover with Bi-BFS", Reference_Attempts__Amount)
+
 
 # Sensitivity Analysis for each given Level
 for _Level in Levels:
-	Reference_Sensitivity_Stats: Sensitivity_Stats = Get__Averaged_Sensitivity_Stats(_Level, "Crossover with Bi-BFS", Reference_Attempts__Amount)
+	Reference_Sensitivity_Stats: Sensitivity_Stats = Get__Averaged_Sensitivity_Stats(_Level, Reference_File__Name_Prefix, Reference_Attempts__Amount)
 
 
 	with open(f"Logs/Genetic Algorithm/Level {_Level}/Sensitivity Analysis/Output.txt", "w") as File:

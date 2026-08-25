@@ -1,0 +1,26 @@
+Solution found to Level 1 with length 2. Final time: 0.002 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in (0, 0) Right
+Move Explorer in (1, 0) Right
+Action history verified.
+
+Solution found to Level 2 with length 4. Final time: 0.004 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in (0, 1) Up
+Move Explorer in (0, 0) Down
+Move Explorer in (0, 1) Right
+Move Explorer in (1, 1) Up
+Action history verified.
+
+Solution found to Level 3 with length 8. Final time: 7.898 seconds, or 0.132 minutes, or 0.002 hours.
+Actions:
+Move Explorer in (0, 2) Right
+Slide Room in (0, 1) Right
+Slide Room in (0, 0) Down
+Move Explorer in (1, 2) Up
+Move Explorer in (1, 1) Left
+Move Explorer in (0, 1) Right
+Move Explorer in (1, 1) Down
+Move Explorer in (1, 2) Right
+Action history verified.
+
