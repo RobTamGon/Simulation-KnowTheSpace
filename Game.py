@@ -9,8 +9,8 @@ from enum import Enum
 
 @dataclass
 class Vector2:
-	x: int
-	y: int
+	x: int = 0
+	y: int = 0
 
 
 	# Gets the Name of the current Vector2 Direction
@@ -33,6 +33,16 @@ class Vector2:
 			return "Down"
 
 
+	# Gets the Manhattan distance between the Vector2s
+	def Get_Manhattan_Distance(self, _Target: "Vector2") -> int:
+		"""
+		Gets and returns the Manhattan distance between the Vector2s.
+		"""
+
+
+		return abs(_Target.x - self.x) + abs(_Target.y - self.y)
+
+
 	# Adds the Translation Vector2 to the current Vector2
 	def Move(self, _Translation: "Vector2") -> None:
 		"""
@@ -43,7 +53,6 @@ class Vector2:
 		self.x += _Translation.x
 		self.y += _Translation.y
 
-
 	# Adds the Translation Vector2 to the current Vector2
 	def Moved(self, _Translation: "Vector2") -> "Vector2":
 		"""
@@ -52,6 +61,7 @@ class Vector2:
 
 
 		return Vector2(self.x + _Translation.x, self.y + _Translation.y)
+
 
 	# Gets the negative Vector2 (-Vector2)
 	def Negated(self) -> "Vector2":

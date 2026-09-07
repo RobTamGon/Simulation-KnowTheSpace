@@ -1,12 +1,13 @@
 from time import time
 from dataclasses import dataclass
 from copy import deepcopy
+from collections.abc import Callable
+from math import inf as C_Infinity
 
 import heapq
 
 
 from Game import Game, Action, Vector2
-from Utility import Display__Explorer_VS_Goal
 
 
 @dataclass
@@ -15,24 +16,16 @@ class AStar_Queue_Node:
 	Action_History: list[Action]
 	G_Cost: int
 	H_Cost: int
-	Final_Cost: int
+	Final_Cost: float
 
-
-# Gets the Manhattan distance from the Explorer to the Goal as the Heuristic Cost
-def Get_Manhattan_H_Cost(_Game: Game):
-	"""
-	Calculates and returns the Manhattan distance from the Explorer to the Goal as the Heuristic Cost.
-	"""
-
-
-	Distance_Vector: Vector2 = _Game.Explorers[0].Position.Moved(_Game.Index_Goal().Position.Negated())
-
-
-	return abs(Distance_Vector.x) + abs(Distance_Vector.y)
+@dataclass
+class AStar_Discovered_Node:
+	G_Cost: int | float = 0
+	Is__Closed: bool = False
 
 
 # A* Algorithm
-def AStar(_Game: Game) -> tuple[list[Action], float]:
+def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Weight: float = 1.0) -> tuple[list[Action], int, int, float]:
 	"""
 	Implementation of the A* algorithm, tracks the elapsed time until reaching the Goal Room.
 
@@ -41,82 +34,102 @@ def AStar(_Game: Game) -> tuple[list[Action], float]:
 
 
 	Initial_Time: float = time()
+	Elapsed_Time: float = time() - Initial_Time
+	Last_Log_Time: float = Elapsed_Time
 
 
 	if _Game.Has__Won():
-		return [], time() - Initial_Time
+		return [], 0, 0, Elapsed_Time,
 
 
 	Counter: int = 0
 
 
-	H_Cost: int = Get_Manhattan_H_Cost(_Game)
+	H_Cost: int = _Heuristic(_Game)
 
 	Current_Node: AStar_Queue_Node = AStar_Queue_Node(
 		_Game,
 		[],
 		0,
 		H_Cost,
-		H_Cost
+		_Weight * H_Cost
 	)
-	Visited_Nodes: list[AStar_Queue_Node] = []
+
+	Discovered_Nodes: dict[str, AStar_Discovered_Node] = {str(_Game): AStar_Discovered_Node()}
+
+	Closed_Count: int = 0
 
 
-	Queue: list[AStar_Queue_Node] = []
-	heapq.heappush(Queue, (Current_Node.Final_Cost, Current_Node.H_Cost, Counter, Current_Node))
+	Open: list[AStar_Queue_Node] = []
+	heapq.heappush(Open, (Current_Node.Final_Cost, Current_Node.H_Cost, Counter, Current_Node))
 
 
-	New_Node__Is_In__Queue: bool = False
+	while len(Open) > 0:
+		Current_Node = heapq.heappop(Open)[3]
+		State_String: str = str(Current_Node.State)
 
 
-	while len(Queue) > 0:
-		Current_Node = heapq.heappop(Queue)[3]
-		New_Node = deepcopy(Current_Node)
+		if Current_Node.G_Cost > Discovered_Nodes.get(State_String, AStar_Discovered_Node(G_Cost = C_Infinity)).G_Cost:
+			continue
+
+		if Discovered_Nodes.get(State_String, AStar_Discovered_Node(Is__Closed = False)).Is__Closed:
+			continue
 
 
-		if len(Visited_Nodes) % 100 == 0:
-			print(f"Visited Nodes: {len(Visited_Nodes)}. Time elapsed: {(time() - Initial_Time):.3f} seconds, or {((time() - Initial_Time) / 60):.3f} minutes, or {((time() - Initial_Time) / 3600):.3f} hours.")
-		# 	Display__Explorer_VS_Goal(Current_Node.State)
+		Elapsed_Time = time() - Initial_Time
+
+		Discovered_Nodes[State_String].Is__Closed = True
+
+		Closed_Count += 1
+
+
+		if Elapsed_Time - Last_Log_Time > 5:
+			Last_Log_Time = time() - Initial_Time
+
+
+			print(f"Visited/Discovered Nodes: {Closed_Count:,}/{len(Discovered_Nodes):,}. Time elapsed: {(Elapsed_Time):.3f} seconds, or {((Elapsed_Time) / 60):.3f} minutes, or {((Elapsed_Time) / 3600):.3f} hours.")
 
 
 		if Current_Node.State.Has__Won():
-			return Current_Node.Action_History, time() - Initial_Time
+			return Current_Node.Action_History, Closed_Count, len(Discovered_Nodes), Elapsed_Time
 
 
-		Visited_Nodes.append(Current_Node)
+		New_Node: AStar_Queue_Node = deepcopy(Current_Node)
+		New_G: int = Current_Node.G_Cost + 1
 
 
 		for _Action in Current_Node.State.Get_Decision_Space():
+			Elapsed_Time = time() - Initial_Time
+
+
+			if Elapsed_Time - Last_Log_Time > 5:
+				Last_Log_Time = time() - Initial_Time
+	
+	
+				print(f"Visited/Discovered Nodes: {Closed_Count:,}/{len(Discovered_Nodes):,}. Time elapsed: {(Elapsed_Time):.3f} seconds, or {((Elapsed_Time) / 60):.3f} minutes, or {((Elapsed_Time) / 3600):.3f} hours.")
+
+
 			New_Node.State.Execute_Action(_Action)
 			New_Node.Action_History.append(_Action)
 
-
-			if not any([str(New_Node.State) == str(_Node.State) for _Node in Visited_Nodes]):
-				New_Node__Is_In__Queue = False
-
-				New_Node.G_Cost = Current_Node.G_Cost + 1
-				New_Node.H_Cost = Get_Manhattan_H_Cost(New_Node.State)
-				New_Node.Final_Cost = New_Node.G_Cost + New_Node.H_Cost
+			State_String = str(New_Node.State)
 
 
-				for _Queue_Node in Queue:
-					if str(_Queue_Node[3].State) == str(New_Node.State) and _Queue_Node[3].Final_Cost > New_Node.Final_Cost:
-						New_Node__Is_In__Queue = True
-
-						_Queue_Node[3].Final_Cost = New_Node.G_Cost + _Queue_Node[3].H_Cost
+			if New_G < Discovered_Nodes.get(State_String, AStar_Discovered_Node(G_Cost = C_Infinity)).G_Cost:
+				Discovered_Nodes[State_String] = AStar_Discovered_Node(G_Cost = New_G)
+				Counter += 1
 
 
-						break
+				New_Node.G_Cost = New_G
+				New_Node.H_Cost = _Heuristic(New_Node.State)
+				New_Node.Final_Cost = New_Node.G_Cost + _Weight * New_Node.H_Cost
 
 
-				if not New_Node__Is_In__Queue:
-					Counter += 1
-
-
-					New_Node.Final_Cost = New_Node.G_Cost + New_Node.H_Cost
-
-					heapq.heappush(Queue, (New_Node.Final_Cost, New_Node.H_Cost, Counter, deepcopy(New_Node)))
+				heapq.heappush(Open, (New_Node.Final_Cost, New_Node.H_Cost, Counter, deepcopy(New_Node)))
 
 
 			New_Node.State.Undo_Action(_Action)
 			New_Node.Action_History.pop()
+
+
+	return [], Closed_Count, len(Discovered_Nodes), time() - Initial_Time

@@ -1,0 +1,140 @@
+Solution found to Level 1 with length 2. 3/3 Visited/Discovered Nodes. Final time: 0.001 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in (0, 0) Right
+Move Explorer in (1, 0) Right
+Action history verified.
+
+Solution found to Level 2 with length 4. 6/7 Visited/Discovered Nodes. Final time: 0.004 seconds, or 0.000 minutes, or 0.000 hours.
+Actions:
+Move Explorer in (0, 1) Up
+Move Explorer in (0, 0) Down
+Move Explorer in (0, 1) Right
+Move Explorer in (1, 1) Up
+Action history verified.
+
+Solution found to Level 3 with length 8. 33/74 Visited/Discovered Nodes. Final time: 0.051 seconds, or 0.001 minutes, or 0.000 hours.
+Actions:
+Slide Room in (0, 1) Right
+Slide Room in (0, 0) Down
+Move Explorer in (0, 2) Right
+Move Explorer in (1, 2) Up
+Move Explorer in (1, 1) Left
+Move Explorer in (0, 1) Right
+Move Explorer in (1, 1) Down
+Move Explorer in (1, 2) Right
+Action history verified.
+
+Solution found to Level 4 with length 25. 36,629/49,159 Visited/Discovered Nodes. Final time: 80.243 seconds, or 1.337 minutes, or 0.022 hours.
+Actions:
+Move Explorer in (1, 2) Right
+Slide Room in (1, 2) Up
+Slide Room in (0, 2) Right
+Move Explorer in (2, 2) Left
+Move Explorer in (1, 2) Up
+Move Explorer in (1, 1) Right
+Slide Room in (0, 1) Down
+Slide Room in (1, 1) Left
+Slide Room in (1, 0) Down
+Slide Room in (0, 0) Right
+Move Explorer in (2, 1) Left
+Move Explorer in (1, 1) Left
+Move Explorer in (0, 1) Down
+Move Explorer in (0, 2) Up
+Move Explorer in (0, 1) Right
+Slide Room in (0, 1) Up
+Slide Room in (0, 2) Up
+Slide Room in (1, 2) Left
+Slide Room in (2, 2) Left
+Slide Room in (2, 1) Down
+Slide Room in (2, 0) Down
+Slide Room in (1, 0) Right
+Slide Room in (0, 0) Right
+Move Explorer in (1, 1) Up
+Move Explorer in (1, 0) Right
+Action history verified.
+
+Solution found to Level 5 with length 47. 150,488/181,887 Visited/Discovered Nodes. Final time: 397.026 seconds, or 6.617 minutes, or 0.110 hours.
+Actions:
+Slide Room in (2, 0) Right
+Slide Room in (2, 2) Left
+Slide Room in (3, 2) Left
+Slide Room in (3, 1) Down
+Slide Room in (3, 0) Down
+Slide Room in (1, 0) Right
+Slide Room in (0, 0) Right
+Slide Room in (0, 1) Up
+Slide Room in (2, 0) Right
+Slide Room in (1, 0) Right
+Slide Room in (0, 0) Right
+Slide Room in (0, 2) Up
+Slide Room in (0, 1) Up
+Move Explorer in (1, 1) Up
+Slide Room in (1, 1) Right
+Slide Room in (1, 2) Left
+Slide Room in (0, 2) Up
+Slide Room in (2, 2) Left
+Slide Room in (1, 2) Left
+Slide Room in (2, 1) Down
+Slide Room in (2, 2) Left
+Slide Room in (3, 2) Left
+Slide Room in (2, 2) Up
+Slide Room in (2, 1) Left
+Slide Room in (3, 1) Down
+Slide Room in (3, 2) Left
+Slide Room in (2, 2) Up
+Slide Room in (1, 2) Right
+Slide Room in (2, 2) Right
+Slide Room in (3, 2) Up
+Slide Room in (2, 1) Down
+Slide Room in (1, 1) Right
+Slide Room in (2, 2) Right
+Slide Room in (2, 1) Down
+Slide Room in (2, 2) Left
+Slide Room in (3, 2) Left
+Slide Room in (2, 2) Up
+Slide Room in (2, 1) Left
+Move Explorer in (1, 0) Down
+Move Explorer in (1, 1) Up
+Slide Room in (1, 1) Right
+Slide Room in (2, 1) Down
+Slide Room in (2, 2) Right
+Slide Room in (1, 2) Right
+Slide Room in (2, 2) Up
+Slide Room in (2, 1) Left
+Move Explorer in (1, 0) Down
+Action history verified.
+
+Solution found to Level 6 with length 30. 105,998/141,343 Visited/Discovered Nodes. Final time: 265.523 seconds, or 4.425 minutes, or 0.074 hours.
+Actions:
+Slide Room in (1, 2) Right
+Slide Room in (1, 3) Up
+Slide Room in (2, 3) Left
+Slide Room in (3, 3) Left
+Slide Room in (3, 2) Down
+Slide Room in (2, 2) Right
+Slide Room in (2, 3) Up
+Slide Room in (1, 3) Right
+Slide Room in (1, 2) Down
+Slide Room in (0, 2) Right
+Move Explorer in (1, 1) Down
+Move Explorer in (1, 2) Down
+Slide Room in (1, 2) Left
+Slide Room in (2, 2) Left
+Move Explorer in (1, 3) Up
+Move Explorer in (1, 2) Down
+Slide Room in (1, 2) Right
+Slide Room in (1, 1) Down
+Slide Room in (1, 0) Down
+Slide Room in (0, 0) Right
+Slide Room in (0, 1) Up
+Slide Room in (1, 1) Left
+Slide Room in (1, 0) Down
+Slide Room in (2, 0) Left
+Slide Room in (2, 1) Up
+Slide Room in (1, 1) Right
+Slide Room in (0, 1) Right
+Move Explorer in (1, 3) Up
+Move Explorer in (1, 2) Up
+Move Explorer in (1, 1) Right
+Action history verified.
+

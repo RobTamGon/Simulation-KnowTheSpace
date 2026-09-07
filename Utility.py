@@ -2,9 +2,6 @@ from Game import Game
 
 
 def Display__Explorer_VS_Goal(_Game: Game):
-	print("\n")
-
-
 	for _Y in range(_Game.Level.Size.y):
 		print("\n")
 

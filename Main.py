@@ -1,3 +1,9 @@
+from collections.abc import Callable
+from math import inf as C_Infinity
+
+
+from Game import Game, Vector2
+
 from ExecuteAlgorithms import Execute__Backtracking, Execute__BFS_Benchmark, Execute__BFS_Search_Space, Execute__Genetic_Algorithm, Execute__AStar
 
 from Algorithms.GeneticAlgorithm import Generation_Creation_Parameters, Fitness_Gameplay_Parameters, Crossover_Fusion_Parameters, Crossover_Fusion_Bi_BFS_Fallback_Parameters, Crossover_Fusion_Cut_And_Generation_Fallback_Parameters, Crossover_Fusion_Regeneration_Fallback_Parameters, Crossover_Fusion_Clone_Fallback_Parameters, Mutate_Random_Ending_Parameters, Mutate_Cut_And_Generation_Parameters
@@ -115,4 +121,59 @@ Attempt: int = 10
 
 
 # A*
-Execute__AStar(Levels)
+# Initializes Heuristic (Lambda) Functions
+Lambda_Zero_H_Cost: Callable[[Game], int] = lambda _Game: 0
+Lambda_Explorer_Goal_H_Cost: Callable[[Game], int] = lambda _Game: _Game.Explorers[0].Position.Get_Manhattan_Distance(_Game.Index_Goal().Position)
+# ↓ [Inadmissible] ↓
+Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost: Callable[[Game], int] = lambda _Game: Get_Explorer_Key_Goal_H_Cost(_Game) + Lambda_Explorer_Goal_H_Cost(_Game)
+
+# [Inadmissible] Gets the sum of the shortest Manhattan distance between the Explorer and a Room with a Key, and between a Room with a Key and the Room with the Goal
+def Get_Explorer_Key_Goal_H_Cost(_Game: Game) -> int:
+	"""
+	[Inadmissible] Gets and returns the sum of the shortest Manhattan distance between the Explorer and a Room with a Key, and between a Room with a Key and the Room with the Goal.
+
+	Note: This function minimizes both distances independently.
+	"""
+
+
+	Goal_Position: Vector2 = _Game.Index_Goal().Position
+
+	Minimum_Explorer_Key_Distance: int = C_Infinity
+	Minimum_Key_Goal_Distance: int = C_Infinity
+
+
+	for _Row in _Game.Rooms:
+		for _Room in _Row:
+			if _Room is None:
+				continue
+
+
+			if _Room.Has == "Key":
+				Current_Explorer_Key_Distance: int = _Game.Explorers[0].Position.Get_Manhattan_Distance(_Room.Position)
+				Current_Key_Goal_Distance: int = _Room.Position.Get_Manhattan_Distance(Goal_Position)
+
+
+				if Current_Explorer_Key_Distance < Minimum_Explorer_Key_Distance:
+					Minimum_Explorer_Key_Distance = Current_Explorer_Key_Distance
+
+				if Current_Key_Goal_Distance < Minimum_Key_Goal_Distance:
+					Minimum_Key_Goal_Distance = Current_Key_Goal_Distance
+
+
+	if Minimum_Explorer_Key_Distance == C_Infinity:
+		Minimum_Explorer_Key_Distance = 0
+
+	if Minimum_Key_Goal_Distance == C_Infinity:
+		Minimum_Key_Goal_Distance = 0
+
+
+	return Minimum_Explorer_Key_Distance + Minimum_Key_Goal_Distance
+
+
+# Executes the Algorithm
+# Execute__AStar(Levels, Lambda_Zero_H_Cost, "Dijkstra Benchmark")
+# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "Benchmark")
+# Execute__AStar(Levels, Get_Explorer_Key_Goal_H_Cost, "(INADMISSIBLE) Explorer-Key-Goal Benchmark")
+# Execute__AStar(Levels, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, "(INADMISSIBLE) E2K2G plus E2G Benchmark")
+Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "1.2W E2G Benchmark", 1.2)
+Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "1.5W E2G Benchmark", 1.5)

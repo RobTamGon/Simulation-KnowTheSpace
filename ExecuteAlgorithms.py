@@ -1,4 +1,5 @@
 from time import time
+from collections.abc import Callable
 
 
 from Game import Game, Action_Type
@@ -244,7 +245,7 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Att
 
 
 # Runs the A* Algorithm and prints the results
-def Execute__AStar(_Levels: list[int]) -> None:
+def Execute__AStar(_Levels: list[int], _Heuristic: Callable[[Game], int], _Filename: str, _Weight: float = 1.0) -> None:
 	"""
 	Runs the A* Algorithm and prints the results.
 	"""
@@ -257,28 +258,28 @@ def Execute__AStar(_Levels: list[int]) -> None:
 		print(f"Level {_Level}")
 
 
-		Actions, Elapsed_Time = AStar(G)
+		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Weight)
 
 
-		with open("Logs/AStar/Benchmark.txt", "a") as File:
-			File.write(f"Solution found to Level {_Level} with length {len(Actions)}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
-			print(f"\n\nSolution found to Level {_Level} with length {len(Actions)}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
+		with open(f"Logs/AStar/{_Filename}.txt", "a") as File:
+			File.write(f"Solution found to Level {_Level} with length {len(Actions)}. {Closed_Nodes:,}/{Discovered_Nodes:,} Visited/Discovered Nodes. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
+			print(f"\n\nSolution found to Level {_Level} with length {len(Actions)}. {Closed_Nodes:,}/{Discovered_Nodes:,} Visited/Discovered Nodes. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
 
 
 			for _Action in Actions:
-				Display__Explorer_VS_Goal(G)
-
-
 				File.write(f"{f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}\n")
-				print(f"\n\n{f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}\n")
+
+
+				# Display__Explorer_VS_Goal(G)
+				# print(f"\n\n{f"Slide Room in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})" if _Action.Type == Action_Type.Room__Slide else f"Move Explorer in ({_Action.Instance_Position.x}, {_Action.Instance_Position.y})"} {_Action.Direction.Direction_Name()}\n")
 
 
 				G.Execute_Action(_Action)
 
 
 			if G.Has__Won():
-				Display__Explorer_VS_Goal(G)
-
-
 				File.write(f"Action history verified.\n{"\n" if _Level < _Levels[-1] else ""}")
-				print(f"\n\nAction history verified.\n{"\n" if _Level < _Levels[-1] else ""}")
+
+
+				# Display__Explorer_VS_Goal(G)
+				# print(f"\n\nAction history verified.\n{"\n" if _Level < _Levels[-1] else ""}")
