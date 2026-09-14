@@ -122,6 +122,7 @@ class Room:
 	def __init__(self, _Initial_Position: Vector2, _Has: str, _Connections: dict[str, Connection]) -> None:
 		self.Position: Vector2 = _Initial_Position
 		self.Has: str = _Has
+		self.Had: str = _Has
 		self.Connections: dict[str, Connection] = _Connections
 
 @dataclass
@@ -351,7 +352,6 @@ class Game:
 			for _Room in _Row:
 				if _Room is not None and _Room.Has == "Goal":
 					return _Room
-
 
 
 		return None

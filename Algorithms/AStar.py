@@ -24,8 +24,57 @@ class AStar_Discovered_Node:
 	Is__Closed: bool = False
 
 
+# Initializes Heuristic (Lambda) Functions
+Lambda_Zero_H_Cost: Callable[[Game], int] = lambda _Game: 0
+Lambda_Explorer_Goal_H_Cost: Callable[[Game], int] = lambda _Game: _Game.Explorers[0].Position.Get_Manhattan_Distance(_Game.Index_Goal().Position)
+# ↓ [Inadmissible] ↓
+Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost: Callable[[Game], int] = lambda _Game: Get_Explorer_Key_Goal_H_Cost(_Game) + Lambda_Explorer_Goal_H_Cost(_Game)
+
+# Gets the sum of the shortest Manhattan distance between the Explorer and a Room with a Key, and between a Room with a Key and the Room with the Goal
+def Get_Explorer_Key_Goal_H_Cost(_Game: Game) -> int:
+	"""
+	Gets and returns the sum of the shortest Manhattan distance between the Explorer and a Room with a Key (remembering the Rooms that previously had Keys), and between a Room with a Key and the Room with the Goal.
+
+	Note: This function minimizes both distances independently.
+	"""
+
+
+	Goal_Position: Vector2 = _Game.Index_Goal().Position
+
+	Minimum_Explorer_Key_Distance: int = C_Infinity
+	Minimum_Key_Goal_Distance: int = C_Infinity
+
+
+	for _Row in _Game.Rooms:
+		for _Room in _Row:
+			if _Room is None:
+				continue
+
+
+			if _Room.Had == "Key":
+				Current_Explorer_Key_Distance: int = _Game.Explorers[0].Position.Get_Manhattan_Distance(_Room.Position)
+				Current_Key_Goal_Distance: int = _Room.Position.Get_Manhattan_Distance(Goal_Position)
+
+
+				if Current_Explorer_Key_Distance < Minimum_Explorer_Key_Distance:
+					Minimum_Explorer_Key_Distance = Current_Explorer_Key_Distance
+
+				if Current_Key_Goal_Distance < Minimum_Key_Goal_Distance:
+					Minimum_Key_Goal_Distance = Current_Key_Goal_Distance
+
+
+	if Minimum_Explorer_Key_Distance == C_Infinity:
+		Minimum_Explorer_Key_Distance = 0
+
+	if Minimum_Key_Goal_Distance == C_Infinity:
+		Minimum_Key_Goal_Distance = 0
+
+
+	return Minimum_Explorer_Key_Distance + Minimum_Key_Goal_Distance
+
+
 # A* Algorithm
-def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Weight: float = 1.0) -> tuple[list[Action], int, int, float]:
+def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False, _Weight: float = 1.0) -> tuple[list[Action], int, int, float]:
 	"""
 	Implementation of the A* algorithm, tracks the elapsed time until reaching the Goal Room.
 
@@ -95,7 +144,7 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Weight: float = 1.0) 
 
 
 		New_Node: AStar_Queue_Node = deepcopy(Current_Node)
-		New_G: int = Current_Node.G_Cost + 1
+		New_G: int = Current_Node.G_Cost + 1 if not _Greedy else 0
 
 
 		for _Action in Current_Node.State.Get_Decision_Space():
@@ -115,7 +164,7 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Weight: float = 1.0) 
 			State_String = str(New_Node.State)
 
 
-			if New_G < Discovered_Nodes.get(State_String, AStar_Discovered_Node(G_Cost = C_Infinity)).G_Cost:
+			if _Greedy or New_G < Discovered_Nodes.get(State_String, AStar_Discovered_Node(G_Cost = C_Infinity)).G_Cost:
 				Discovered_Nodes[State_String] = AStar_Discovered_Node(G_Cost = New_G)
 				Counter += 1
 

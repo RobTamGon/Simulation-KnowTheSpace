@@ -245,7 +245,7 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Att
 
 
 # Runs the A* Algorithm and prints the results
-def Execute__AStar(_Levels: list[int], _Heuristic: Callable[[Game], int], _Filename: str, _Weight: float = 1.0) -> None:
+def Execute__AStar(_Levels: list[int], _Heuristic: Callable[[Game], int], _Filename: str, _Greedy: bool = False, _Weight: float = 1.0) -> None:
 	"""
 	Runs the A* Algorithm and prints the results.
 	"""
@@ -258,7 +258,7 @@ def Execute__AStar(_Levels: list[int], _Heuristic: Callable[[Game], int], _Filen
 		print(f"Level {_Level}")
 
 
-		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Weight)
+		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Greedy, _Weight)
 
 
 		with open(f"Logs/AStar/{_Filename}.txt", "a") as File:
