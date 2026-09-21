@@ -72,9 +72,124 @@ def Get_Explorer_Key_Goal_H_Cost(_Game: Game) -> int:
 
 	return Minimum_Explorer_Key_Distance + Minimum_Key_Goal_Distance
 
+# [Inadmissible] Gets the sum of the shortest Manhattan distance between the Explorer and a Room with a Key, multiplied by the amount of Keys given to be needed that haven't been obtained yet, and between a Room with a Key and the Room with the Goal
+def Old_Get_Explorer_nKeys_Goal_H_Cost(_Game: Game, _Parameters: dict[str, int]) -> int:
+	"""
+	[Inadmissible]
+
+	Gets and returns the sum of the shortest Manhattan distance between the Explorer and a Room with a Key (remembering the Rooms that previously had Keys), multiplied by the amount of Keys given to be needed that haven't been obtained yet, and between a Room with a Key and the Room with the Goal.
+
+	Heuristic Parameters:
+
+	"Keys": int: Amount of Keys needed to beat the Level.
+
+	Note: This function minimizes both distances independently.
+	"""
+
+
+	Goal_Position: Vector2 = _Game.Index_Goal().Position
+	
+	Minimum_Explorer_Key_Distance: int = C_Infinity
+	Minimum_Key_Goal_Distance: int = C_Infinity
+
+
+	nKeys_Multiplier: int = _Parameters["Keys"]
+
+
+	for _Row in _Game.Rooms:
+		for _Room in _Row:
+			if _Room is None:
+				continue
+
+
+			if _Room.Had == "Key":
+				Current_Explorer_Key_Distance: int = _Game.Explorers[0].Position.Get_Manhattan_Distance(_Room.Position)
+				Current_Key_Goal_Distance: int = _Room.Position.Get_Manhattan_Distance(Goal_Position)
+
+
+				if Current_Explorer_Key_Distance < Minimum_Explorer_Key_Distance:
+					Minimum_Explorer_Key_Distance = Current_Explorer_Key_Distance
+
+				if Current_Key_Goal_Distance < Minimum_Key_Goal_Distance:
+					Minimum_Key_Goal_Distance = Current_Key_Goal_Distance
+
+
+				if _Room.Has != "Key":
+					nKeys_Multiplier = max(nKeys_Multiplier - 1, 0)
+
+
+	if Minimum_Explorer_Key_Distance == C_Infinity:
+		Minimum_Explorer_Key_Distance = 0
+
+	if Minimum_Key_Goal_Distance == C_Infinity:
+		Minimum_Key_Goal_Distance = 0
+
+
+	return Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance
+
+# Gets the sum of the shortest Manhattan distance between the Explorer and a Room with a Key, multiplied by the amount of Keys given to be needed that haven't been obtained yet, and between a Room with a Key and the Room with the Goal
+def Get_Explorer_nKeys_Goal_H_Cost(_Game: Game, _Parameters: dict[str, int]) -> int:
+	"""
+	Gets and returns the sum of the shortest Manhattan distance between the Explorer and a Room with a Key (remembering the Rooms that previously had Keys), multiplied by the amount of Keys given to be needed that haven't been obtained yet, and between a Room with a Key and the Room with the Goal.
+
+	If the amount of Keys given to be needed that haven't been obtained yet reaches 0, returns the Manhattan distance between the Explorer and the Room with the Goal.
+
+	Heuristic Parameters:
+
+	"Keys": int: Amount of Keys needed to beat the Level.
+
+	Note: This function minimizes both distances independently.
+	"""
+
+
+	Goal_Position: Vector2 = _Game.Index_Goal().Position
+	
+	Minimum_Explorer_Key_Distance: int = C_Infinity
+	Minimum_Key_Goal_Distance: int = C_Infinity
+
+
+	nKeys_Multiplier: int = _Parameters["Keys"]
+
+
+	for _Row in _Game.Rooms:
+		for _Room in _Row:
+			if _Room is None:
+				continue
+
+
+			if _Room.Had == "Key":
+				Current_Explorer_Key_Distance: int = _Game.Explorers[0].Position.Get_Manhattan_Distance(_Room.Position)
+				Current_Key_Goal_Distance: int = _Room.Position.Get_Manhattan_Distance(Goal_Position)
+
+
+				if Current_Explorer_Key_Distance < Minimum_Explorer_Key_Distance:
+					Minimum_Explorer_Key_Distance = Current_Explorer_Key_Distance
+
+				if Current_Key_Goal_Distance < Minimum_Key_Goal_Distance:
+					Minimum_Key_Goal_Distance = Current_Key_Goal_Distance
+
+
+				if _Room.Has != "Key":
+					nKeys_Multiplier = max(nKeys_Multiplier - 1, 0)
+
+
+	if nKeys_Multiplier == 0:
+		return _Game.Explorers[0].Position.Get_Manhattan_Distance(Goal_Position)
+
+
+	if Minimum_Explorer_Key_Distance == C_Infinity:
+		Minimum_Explorer_Key_Distance = 0
+
+	if Minimum_Key_Goal_Distance == C_Infinity:
+		Minimum_Key_Goal_Distance = 0
+
+
+	return Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance
+
+
 
 # A* Algorithm
-def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False, _Weight: float = 1.0) -> tuple[list[Action], int, int, float]:
+def AStar(_Game: Game, _Heuristic: Callable[[Game], int] | Callable[[Game, dict], int], _Heuristic_Parameters: dict = {}, _Greedy: bool = False, _Weight: float = 1.0) -> tuple[list[Action], int, int, float]:
 	"""
 	Implementation of the A* algorithm, tracks the elapsed time until reaching the Goal Room.
 
@@ -84,7 +199,7 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False,
 
 	Initial_Time: float = time()
 	Elapsed_Time: float = time() - Initial_Time
-	Last_Log_Time: float = Elapsed_Time
+	Last_Log_Time_Step: float = Elapsed_Time
 
 
 	if _Game.Has__Won():
@@ -94,7 +209,7 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False,
 	Counter: int = 0
 
 
-	H_Cost: int = _Heuristic(_Game)
+	H_Cost: int = _Heuristic(_Game, _Heuristic_Parameters) if len(_Heuristic_Parameters) > 0 else _Heuristic(_Game)
 
 	Current_Node: AStar_Queue_Node = AStar_Queue_Node(
 		_Game,
@@ -132,8 +247,8 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False,
 		Closed_Count += 1
 
 
-		if Elapsed_Time - Last_Log_Time > 5:
-			Last_Log_Time = time() - Initial_Time
+		if Elapsed_Time - Last_Log_Time_Step > 5:
+			Last_Log_Time_Step = time() - Initial_Time - (time() - Initial_Time) % 5
 
 
 			print(f"Visited/Discovered Nodes: {Closed_Count:,}/{len(Discovered_Nodes):,}. Time elapsed: {(Elapsed_Time):.3f} seconds, or {((Elapsed_Time) / 60):.3f} minutes, or {((Elapsed_Time) / 3600):.3f} hours.")
@@ -151,8 +266,8 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False,
 			Elapsed_Time = time() - Initial_Time
 
 
-			if Elapsed_Time - Last_Log_Time > 5:
-				Last_Log_Time = time() - Initial_Time
+			if Elapsed_Time - Last_Log_Time_Step > 5:
+				Last_Log_Time_Step = time() - Initial_Time - (time() - Initial_Time) % 5
 	
 	
 				print(f"Visited/Discovered Nodes: {Closed_Count:,}/{len(Discovered_Nodes):,}. Time elapsed: {(Elapsed_Time):.3f} seconds, or {((Elapsed_Time) / 60):.3f} minutes, or {((Elapsed_Time) / 3600):.3f} hours.")
@@ -170,7 +285,7 @@ def AStar(_Game: Game, _Heuristic: Callable[[Game], int], _Greedy: bool = False,
 
 
 				New_Node.G_Cost = New_G
-				New_Node.H_Cost = _Heuristic(New_Node.State)
+				New_Node.H_Cost = _Heuristic(New_Node.State, _Heuristic_Parameters) if len(_Heuristic_Parameters) > 0 else _Heuristic(New_Node.State)
 				New_Node.Final_Cost = New_Node.G_Cost + _Weight * New_Node.H_Cost
 
 

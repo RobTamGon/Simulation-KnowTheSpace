@@ -5,7 +5,7 @@ from math import inf as C_Infinity
 from ExecuteAlgorithms import Execute__Backtracking, Execute__BFS_Benchmark, Execute__BFS_Search_Space, Execute__Genetic_Algorithm, Execute__AStar
 
 from Algorithms.GeneticAlgorithm import Generation_Creation_Parameters, Fitness_Gameplay_Parameters, Crossover_Fusion_Parameters, Crossover_Fusion_Bi_BFS_Fallback_Parameters, Crossover_Fusion_Cut_And_Generation_Fallback_Parameters, Crossover_Fusion_Regeneration_Fallback_Parameters, Crossover_Fusion_Clone_Fallback_Parameters, Mutate_Random_Ending_Parameters, Mutate_Cut_And_Generation_Parameters
-from Algorithms.AStar import Lambda_Zero_H_Cost, Lambda_Explorer_Goal_H_Cost, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, Get_Explorer_Key_Goal_H_Cost
+from Algorithms.AStar import Lambda_Zero_H_Cost, Lambda_Explorer_Goal_H_Cost, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, Get_Explorer_Key_Goal_H_Cost, Old_Get_Explorer_nKeys_Goal_H_Cost, Get_Explorer_nKeys_Goal_H_Cost
 
 
 # Levels to run the Algorithms in
@@ -120,17 +120,38 @@ Attempt: int = 10
 
 
 # A*
-# Execute__AStar(Levels, Lambda_Zero_H_Cost, "Dijkstra Benchmark")
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "Benchmark")
-# Execute__AStar(Levels, Get_Explorer_Key_Goal_H_Cost, "Explorer-Key-Goal Benchmark")
-# Execute__AStar(Levels, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, "(INADMISSIBLE) E2K2G plus E2G Benchmark")
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "1.2W E2G Benchmark", _Weight = 1.2)
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "1.5W E2G Benchmark", _Weight = 1.5)
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "2W E2G Benchmark", _Weight = 2)
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "5W E2G Benchmark", _Weight = 5)
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "8W E2G Benchmark", _Weight = 8)
-# Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "10W E2G Benchmark", _Weight = 10)
+# Execute__AStar(Levels, "Dijkstra Benchmark", Lambda_Zero_H_Cost)
+# Execute__AStar(Levels, "Benchmark", Lambda_Explorer_Goal_H_Cost)
+# Execute__AStar(Levels, "Explorer-Key-Goal Benchmark", Get_Explorer_Key_Goal_H_Cost)
+# Execute__AStar(Levels, "(INADMISSIBLE) E2K2G plus E2G Benchmark", Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost)
+# Execute__AStar(Levels, "1.2W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 1.2)
+# Execute__AStar(Levels, "1.5W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 1.5)
+# Execute__AStar(Levels, "2W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 2)
+# Execute__AStar(Levels, "5W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 5)
+# Execute__AStar(Levels, "8W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 8)
+# Execute__AStar(Levels, "10W E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Weight = 10)
+# Execute__AStar(Levels, "(INADMISSIBLE) Explorer-nKeys-Goal Benchmark", Old_Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
+#     { "Keys": 0 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 2 },
+#     { "Keys": 2 },
+# ))
+Execute__AStar(Levels, "Explorer-nKeys-Goal Benchmark", Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
+    { "Keys": 0 },
+    { "Keys": 1 },
+    { "Keys": 1 },
+    { "Keys": 1 },
+    { "Keys": 1 },
+    { "Keys": 1 },
+    { "Keys": 2 },
+    { "Keys": 2 },
+))
+
 
 # CHECK IF CORRECT
-Execute__AStar(Levels, Lambda_Explorer_Goal_H_Cost, "Greedy E2G Benchmark", _Greedy = True)
-Execute__AStar(Levels, Get_Explorer_Key_Goal_H_Cost, "Greedy E2K2G Benchmark", _Greedy = True)
+# Execute__AStar(Levels, "Greedy E2G Benchmark", Lambda_Explorer_Goal_H_Cost, _Greedy = True)
+# Execute__AStar(Levels, "Greedy E2K2G Benchmark", Get_Explorer_Key_Goal_H_Cost, _Greedy = True)

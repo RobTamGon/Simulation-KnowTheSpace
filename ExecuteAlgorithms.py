@@ -245,25 +245,26 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Att
 
 
 # Runs the A* Algorithm and prints the results
-def Execute__AStar(_Levels: list[int], _Heuristic: Callable[[Game], int], _Filename: str, _Greedy: bool = False, _Weight: float = 1.0) -> None:
+def Execute__AStar(_Levels: list[int], _Filename: str, _Heuristic: Callable[[Game], int] | Callable[[Game, dict], int], _Heuristic_Parameters: tuple[dict] = ({}), _Greedy: bool = False, _Weight: float = 1.0) -> None:
 	"""
 	Runs the A* Algorithm and prints the results.
 	"""
 
 
-	for _Level in _Levels:
+	for i, _Level in enumerate(_Levels):
 		G = Game(_Level)
 
 
 		print(f"Level {_Level}")
 
 
-		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Greedy, _Weight)
+		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Heuristic_Parameters[i], _Greedy, _Weight) if len(_Heuristic_Parameters[i]) > 0 else AStar(G, _Heuristic, _Greedy, _Weight)
 
 
 		with open(f"Logs/AStar/{_Filename}.txt", "a") as File:
 			File.write(f"Solution found to Level {_Level} with length {len(Actions)}. {Closed_Nodes:,}/{Discovered_Nodes:,} Visited/Discovered Nodes. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
-			print(f"\n\nSolution found to Level {_Level} with length {len(Actions)}. {Closed_Nodes:,}/{Discovered_Nodes:,} Visited/Discovered Nodes. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\nActions:\n")
+			print(f"\n\nSolution found to Level {_Level} with length {len(Actions)}. {Closed_Nodes:,}/{Discovered_Nodes:,} Visited/Discovered Nodes. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.\n")
+			# print("Actions:\n")
 
 
 			for _Action in Actions:
