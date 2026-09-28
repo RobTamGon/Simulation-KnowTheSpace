@@ -184,7 +184,8 @@ def Get_Explorer_nKeys_Goal_H_Cost(_Game: Game, _Parameters: dict[str, int]) -> 
 		Minimum_Key_Goal_Distance = 0
 
 
-	return Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance
+	# return Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance # V1
+	return max(Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance, _Game.Explorers[0].Position.Get_Manhattan_Distance(Goal_Position)) # V2
 
 
 

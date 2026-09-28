@@ -140,7 +140,7 @@ Attempt: int = 10
 #     { "Keys": 2 },
 #     { "Keys": 2 },
 # ))
-Execute__AStar(Levels, "Explorer-nKeys-Goal Benchmark", Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
+Execute__AStar(Levels, "Explorer-nKeys-Goal V2 Benchmark", Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
     { "Keys": 0 },
     { "Keys": 1 },
     { "Keys": 1 },
