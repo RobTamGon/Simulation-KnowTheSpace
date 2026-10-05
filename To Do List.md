@@ -10,7 +10,7 @@ Make a way to copy the original *Level* without having to load the JSON every si
 
 ---
 
-### IMPROVEMENT:
+### IMPROVEMENTS:
 
 In ```Crossover_Fusion```, make a way to maximize the amount of *Individual*s that get paired for sharing a *State* (as it's not optimal now, for example: ```I1``` and ```I2``` may share *State*s, but ```I1``` could also share *State*s with ```I3```, ```I4``` and ```I6```, and ```I2``` could also share *State*s with ```I5```, so in this case, there's at least 1 pair of *State* sharing *Individual*s lost, which would in turn increase the amount of *Bi-BFS* needed to be done).
 
@@ -73,3 +73,7 @@ Clean ```ProcessSensitivityAnalysis.py```.
 ---
 
 Fix in ```Utility.Get__Averaged_Sensitivity_Stats``` the division should be by ```_Attempts```, but instead by only the successful attempts, which would be ```Output.Total_Attempts - Output.Failed_Attempts``` once all the attempts have been checked (which means that this calculation should be refactored to happen outside of the ```for``` loop).
+
+---
+
+Sort imports

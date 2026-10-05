@@ -1,11 +1,7 @@
-from collections.abc import Callable
-from math import inf as C_Infinity
-
-
 from ExecuteAlgorithms import Execute__Backtracking, Execute__BFS_Benchmark, Execute__BFS_Search_Space, Execute__Genetic_Algorithm, Execute__AStar
 
 from Algorithms.GeneticAlgorithm import Generation_Creation_Parameters, Fitness_Gameplay_Parameters, Crossover_Fusion_Parameters, Crossover_Fusion_Bi_BFS_Fallback_Parameters, Crossover_Fusion_Cut_And_Generation_Fallback_Parameters, Crossover_Fusion_Regeneration_Fallback_Parameters, Crossover_Fusion_Clone_Fallback_Parameters, Mutate_Random_Ending_Parameters, Mutate_Cut_And_Generation_Parameters
-from Algorithms.AStar import Lambda_Zero_H_Cost, Lambda_Explorer_Goal_H_Cost, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, Get_Explorer_Key_Goal_H_Cost, Old_Get_Explorer_nKeys_Goal_H_Cost, Get_Explorer_nKeys_Goal_H_Cost
+from Algorithms.AStar import Lambda_Zero_H_Cost, Lambda_Explorer_Goal_H_Cost, Lambda_Explorer_Key_Goal_Plus_Explorer_Goal_H_Cost, Get_Explorer_Key_Goal_H_Cost, Old_Get_Explorer_nKeys_Goal_H_Cost, Get_Explorer_nKeys_Goal_H_Cost, BFS_Connected_Goal_Target, Lambda_E2nK2G_Connected_Goal_H_Cost
 
 
 # Levels to run the Algorithms in
@@ -90,9 +86,6 @@ Attempt: int = 10
 
 
 
-
-
-
 # Brute-force
 # DFS
 # Execute__Backtracking(Levels, Max_Depth)
@@ -140,7 +133,17 @@ Attempt: int = 10
 #     { "Keys": 2 },
 #     { "Keys": 2 },
 # ))
-Execute__AStar(Levels, "Explorer-nKeys-Goal V2 Benchmark", Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
+# Execute__AStar(Levels, "Explorer-nKeys-Goal V2 Benchmark", Get_Explorer_nKeys_Goal_H_Cost, _Heuristic_Parameters = (
+#     { "Keys": 0 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 1 },
+#     { "Keys": 2 },
+#     { "Keys": 2 },
+# ))
+Execute__AStar(Levels, "Explorer-nKeys-Goal V2 + Connected Goal Benchmark", Lambda_E2nK2G_Connected_Goal_H_Cost, _Heuristic_Parameters = (
     { "Keys": 0 },
     { "Keys": 1 },
     { "Keys": 1 },

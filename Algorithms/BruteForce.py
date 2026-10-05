@@ -1,12 +1,20 @@
 from time import time
 from dataclasses import dataclass
+from enum import Enum
 # from sys import setrecursionlimit
+from collections.abc import Callable
 
 
 from Game import Game, Action
 
 
 # setrecursionlimit(100000)
+
+
+class BFS_Target_Type(Enum):
+	Win = 0
+	String = 1
+	Function = 2
 
 
 Iterations: int = 0
@@ -104,12 +112,15 @@ def Backtracking_Iteration(_Game: Game, _Visited_States: list[str], _Action_Hist
 
 
 # BFS algorithm
-def BFS(_Game: Game, _Target_State: str = "", _Max_Depth: int = -1) -> tuple[list[Action], int, int, float]:
+def BFS(_Game: Game, _Target: str | Callable[[Game], bool] = "", _Max_Depth: int = -1) -> tuple[list[Action], int, int, float]:
 	"""
-	Implementation of the BFS algorithm, tracks the elapsed time until reaching a winning State to the Level in the given Game, or the _Target_State if given.
+	Implementation of the BFS algorithm, tracks the elapsed time until reaching a winning State to the Level in the given Game, or the _Target if given.
 
 	Returns a list with the sequence of Actions the algorithm found to reach the desired State, plus some other metrics.
 	"""
+
+
+	Target_Type: BFS_Target_Type = (BFS_Target_Type.Win if _Target == "" else BFS_Target_Type.String) if isinstance(_Target, str) else BFS_Target_Type.Function
 
 
 	Iterations: int = 0
@@ -121,7 +132,7 @@ def BFS(_Game: Game, _Target_State: str = "", _Max_Depth: int = -1) -> tuple[lis
 	Elapsed_Time: float = -1.0
 
 
-	if (_Target_State == "" and not _Game.Has__Won()) or (_Target_State != "" and str(_Game) != _Target_State):
+	if (Target_Type == BFS_Target_Type.Win and not _Game.Has__Won()) or (Target_Type == BFS_Target_Type.String and str(_Game) != _Target) or (Target_Type == BFS_Target_Type.Function and not _Target(_Game)):
 		Queue: list[list[Action]] = []
 		Visited_States.append(str(_Game))
 
@@ -172,14 +183,21 @@ def BFS(_Game: Game, _Target_State: str = "", _Max_Depth: int = -1) -> tuple[lis
 			Visited_States.append(Current_State)
 
 
-			if _Target_State != "":
-				if Current_State == _Target_State:
-					break
-			elif _Game.Has__Won():
-				if _Max_Depth == -1:
-					break
-				else:
-					continue
+			match Target_Type:
+				case BFS_Target_Type.Win:
+					if _Game.Has__Won():
+						if _Max_Depth == -1:
+							break
+						else:
+							continue
+
+				case BFS_Target_Type.String:
+					if Current_State == _Target:
+						break
+
+				case BFS_Target_Type.Function:
+					if _Target(_Game):
+						break
 
 
 			for _Action in _Game.Get_Decision_Space():
@@ -191,7 +209,7 @@ def BFS(_Game: Game, _Target_State: str = "", _Max_Depth: int = -1) -> tuple[lis
 	Elapsed_Time = time() - Initial_Time
 
 
-	print(f"{f"Solution found with length {len(Action_History)}" if _Max_Depth == -1 else f"Search space with depth of {_Max_Depth} Actions complete"}, final iteration count: {Iterations:,}, unique states visited: {len(Visited_States):,}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.")
+	# print(f"{f"Solution found with length {len(Action_History)}" if _Max_Depth == -1 else f"Search space with depth of {_Max_Depth} Actions complete"}, final iteration count: {Iterations:,}, unique states visited: {len(Visited_States):,}. Final time: {Elapsed_Time:.3f} seconds, or {(Elapsed_Time / 60):.3f} minutes, or {(Elapsed_Time / 3600):.3f} hours.")
 
 
 	return Action_History, Iterations, len(Visited_States), Elapsed_Time

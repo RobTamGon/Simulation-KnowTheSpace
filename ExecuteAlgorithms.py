@@ -245,7 +245,7 @@ def Execute__Genetic_Algorithm(_Levels: list[int], _File__Name_Prefix: str, _Att
 
 
 # Runs the A* Algorithm and prints the results
-def Execute__AStar(_Levels: list[int], _Filename: str, _Heuristic: Callable[[Game], int] | Callable[[Game, dict], int], _Heuristic_Parameters: tuple[dict] = ({}), _Greedy: bool = False, _Weight: float = 1.0) -> None:
+def Execute__AStar(_Levels: list[int], _Filename: str, _Heuristic: Callable[[Game], int] | Callable[[Game, dict], int], _Heuristic_Parameters: tuple[dict] = tuple(dict()), _Greedy: bool = False, _Weight: float = 1.0) -> None:
 	"""
 	Runs the A* Algorithm and prints the results.
 	"""
@@ -258,7 +258,7 @@ def Execute__AStar(_Levels: list[int], _Filename: str, _Heuristic: Callable[[Gam
 		print(f"Level {_Level}")
 
 
-		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Heuristic_Parameters[i], _Greedy, _Weight) if len(_Heuristic_Parameters[i]) > 0 else AStar(G, _Heuristic, _Greedy, _Weight)
+		Actions, Closed_Nodes, Discovered_Nodes, Elapsed_Time = AStar(G, _Heuristic, _Heuristic_Parameters[i], _Greedy, _Weight) if len(_Heuristic_Parameters) > i and len(_Heuristic_Parameters[i]) > 0 else AStar(G, _Heuristic, _Greedy = _Greedy, _Weight = _Weight)
 
 
 		with open(f"Logs/AStar/{_Filename}.txt", "a") as File:

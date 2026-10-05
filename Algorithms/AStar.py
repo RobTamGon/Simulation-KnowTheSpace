@@ -7,7 +7,8 @@ from math import inf as C_Infinity
 import heapq
 
 
-from Game import Game, Action, Vector2
+from Game import Game, Room, Direction, Action, Vector2
+from Algorithms.BruteForce import BFS
 
 
 @dataclass
@@ -187,6 +188,29 @@ def Get_Explorer_nKeys_Goal_H_Cost(_Game: Game, _Parameters: dict[str, int]) -> 
 	# return Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance # V1
 	return max(Minimum_Explorer_Key_Distance * nKeys_Multiplier + Minimum_Key_Goal_Distance, _Game.Explorers[0].Position.Get_Manhattan_Distance(Goal_Position)) # V2
 
+
+# Defines the criteria for BFS to end when a Room gets Connected with the one that has the Goal
+def BFS_Connected_Goal_Target(_Game: Game) -> bool:
+	"""
+	Defines and evaluates the criteria for BFS to end when a Room gets Connected with the one that has the Goal.
+	"""
+
+
+	Goal_Instance: Room = _Game.Index_Goal()
+
+
+	for _Direction in Direction:
+		Connected_Position: Vector2 = Goal_Instance.Position.Moved(_Direction.value)
+
+
+		if Goal_Instance.Connections[_Direction.name].Exists and _Game.Is__In_Bounds(Connected_Position) and _Game.Rooms[Connected_Position.y][Connected_Position.x] is not None and _Game.Rooms[Connected_Position.y][Connected_Position.x].Connections[_Direction.value.Negated().Direction_Name()].Exists and ((_Direction.value.x != 0 and not _Game.Is__Wall(_Direction.value.x, "Vertical", Goal_Instance.Position)) or (_Direction.value.y != 0 and not _Game.Is__Wall(_Direction.value.y, "Horizontal", Goal_Instance.Position))):
+			return True
+
+
+	return False
+
+# Sum of E2nK2G and the amount of Actions needed to Connect a Room with the one that has the Goal
+Lambda_E2nK2G_Connected_Goal_H_Cost: Callable[[Game], int] = lambda _Game, _Parameters: Get_Explorer_nKeys_Goal_H_Cost(_Game, _Parameters) + len(BFS(deepcopy(_Game), BFS_Connected_Goal_Target)[0])
 
 
 # A* Algorithm
